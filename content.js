@@ -281,7 +281,7 @@ window.HMOX_COURSE = {
           'Our tools read figures only. The valuer has seen the asset, the compliance documents and the client\'s timeframe. The valuer\'s judgement wins, with one sentence explaining why.'
         ]}
       ],
-      confirm: 'Lucy Donovan added from the Hub (it credits her for the Hub community and member onboarding). Still to confirm: the senior salesperson joining in January, and whether Hitesh (ads and GHL support) should appear.',
+      confirm: 'Confirm the senior salesperson joining in January.',
       questions: [
         { q: 'A landlord rings saying they are thinking of selling. Who is their first call?', o: ['Richard Parsons', 'Kirby Butcher', 'Holly Hunt', 'Eric'], a: 0, why: 'Richard Parsons is the Valuations Coordinator and triages every seller enquiry.' },
         { q: 'Who takes a property from agreed instruction to listing-ready and compliant?', o: ['Fran Perry', 'Georgia Hopewell', 'Nikki Yearsley', 'Richard Parsons'], a: 0, why: 'Fran owns onboarding and the Committed Sale checklist.' },

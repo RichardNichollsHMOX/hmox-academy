@@ -23,4 +23,4 @@ Team induction and annual refresher for HMO X. Published (owner: Richard) at htt
 2. Done: Committed Sale minimum fee £4,000; HMO X Auctions minimum fee £5,000 (Richard, 26 Nov). Hand-prepared GDV stays in the course, but the instant GDV Appraisal is the one to push.
 3. Done: Value My HMO is £19.99 + VAT launch price (RRP £99 + VAT), from hmox.co.uk (updated 25 Nov 2026). The Hub is free for 12 months, to 31 December 2027, while the tools and analysers launch (Richard, 26 Nov).
 4. Redress scheme, complaints process, service response times: Holly is redoing the policy pages this week and Richard will add them. Do not invent them.
-5. Day one: the Hub part is now in the intro module. Still needed: hours, other logins, buddy, and the January senior salesperson induction. Also whether Hitesh belongs on the team page.
+5. Day one: the Hub part is now in the intro module. Still needed: hours, other logins, buddy, and the January senior salesperson induction. Hitesh is not on the team page (Richard, 26 Nov): leave him out.
