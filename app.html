@@ -1,0 +1,451 @@
+<title>HMO X Academy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one reading column; home = progress + module ladder, module = lesson then quiz, team = sign-off register. */
+:root{
+  --ink:#282829; --ink-2:#55575b; --ink-3:#85878c;
+  --bg:#ffffff; --panel:#f3f6f5; --line:#e1e7e5;
+  --teal:#4DE3BD; --teal-ink:#0b2a22; --teal-deep:#0f8f72;
+  --good:#127a4f; --good-bg:#e3f5ec; --warn:#8a5a00; --warn-bg:#fdf1d8; --bad:#b3261e; --bad-bg:#fbe6e4;
+  --hero:#282829; --hero-fg:#ffffff; --hero-dim:#b9bcbf;
+  --display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --body:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ink:#eef0ef; --ink-2:#b8bdbb; --ink-3:#8b918f; --bg:#151817; --panel:#1e2322; --line:#2d3432;
+  --teal-deep:#4DE3BD; --good:#6fd6a4; --good-bg:#16302a; --warn:#f0c46a; --warn-bg:#352a12; --bad:#ff8a80; --bad-bg:#3a1c1a;
+  --hero:#0c0e0d; --hero-fg:#ffffff; --hero-dim:#9ea3a1; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#eef0ef; --ink-2:#b8bdbb; --ink-3:#8b918f; --bg:#151817; --panel:#1e2322; --line:#2d3432;
+  --teal-deep:#4DE3BD; --good:#6fd6a4; --good-bg:#16302a; --warn:#f0c46a; --warn-bg:#352a12; --bad:#ff8a80; --bad-bg:#3a1c1a;
+  --hero:#0c0e0d; --hero-fg:#ffffff; --hero-dim:#9ea3a1; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+*{box-sizing:border-box}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+a{color:var(--teal-deep)}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,label:focus-within{outline:3px solid var(--teal);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* top band */
+.band{background:var(--hero);color:var(--hero-fg);margin-top:calc(-1 * env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px)}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--hero-fg);text-decoration:none}
+.mark{width:30px;height:30px;border-radius:8px;background:var(--hero-fg);display:grid;place-items:center;flex:none}
+.mark i{width:12px;height:12px;border-radius:3px;background:var(--teal);display:block}
+.brand b{font-family:var(--display);font-size:19px;letter-spacing:-.01em}
+.brand span{color:var(--teal);font-weight:500}
+.tabs{display:flex;gap:4px}
+.tabs a{color:var(--hero-dim);text-decoration:none;font-weight:600;font-size:14px;padding:7px 12px;border-radius:999px}
+.tabs a[aria-current="page"]{background:color-mix(in srgb,var(--hero-fg) 14%,transparent);color:var(--hero-fg)}
+
+main{padding-block:28px 64px;display:grid;gap:28px}
+.notice{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--ink-2)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-deep)}
+.muted{color:var(--ink-2)}
+.small{font-size:14px}
+
+/* summary */
+.summary{display:grid;gap:18px}
+.summary h1{font-size:clamp(28px,5vw,40px)}
+.meter{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}
+.meter i{height:10px;border-radius:3px;background:var(--line);display:block}
+.meter i.on{background:var(--teal)}
+.stage{display:grid;gap:10px;background:var(--panel);border-radius:14px;padding:18px}
+.stage h2{font-size:20px}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.steps li{border-top:3px solid var(--line);padding-top:8px;font-size:14px;color:var(--ink-2);min-width:0}
+.steps li b{display:block;color:var(--ink);font-size:14px}
+.steps li.done{border-color:var(--teal)}
+.steps li.now{border-color:var(--ink)}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* module list */
+.mods{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.mods li{border-bottom:1px solid var(--line)}
+.mods a{display:grid;grid-template-columns:2.2em 1fr auto;gap:12px;align-items:center;padding:14px 4px;color:inherit;text-decoration:none}
+.mods a:hover .t{color:var(--teal-deep)}
+.mods .n{font-family:var(--display);font-weight:700;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.mods .t{font-weight:600;display:block}
+.mods .s{font-size:14px;color:var(--ink-2);display:block}
+.mods .txt{min-width:0}
+.chip{font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px;white-space:nowrap;background:var(--panel);color:var(--ink-2)}
+.chip.good{background:var(--good-bg);color:var(--good)}
+.chip.warn{background:var(--warn-bg);color:var(--warn)}
+.chip.bad{background:var(--bad-bg);color:var(--bad)}
+.chip.ink{background:var(--ink);color:var(--bg)}
+
+/* lesson */
+.lesson{display:grid;gap:26px}
+.lesson header{display:grid;gap:10px}
+.lesson header h1{font-size:clamp(28px,5vw,38px)}
+.back{font-size:14px;font-weight:600;text-decoration:none}
+.sec{display:grid;gap:10px;max-width:68ch}
+.sec h2{font-size:21px}
+.sec ul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+dl.terms{margin:0;display:grid;gap:0;border-top:1px solid var(--line)}
+dl.terms div{display:grid;grid-template-columns:minmax(0,13em) 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+dl.terms dt{font-weight:700}
+dl.terms dd{margin:0;color:var(--ink-2)}
+@media(max-width:560px){dl.terms div{grid-template-columns:1fr;gap:2px}}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+td{font-variant-numeric:tabular-nums}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.card{background:var(--panel);border-radius:12px;padding:14px;display:grid;gap:4px;align-content:start}
+.card b{font-family:var(--display);font-size:18px}
+.card .role{font-size:13px;font-weight:600;color:var(--teal-deep)}
+.confirm{border:1.5px dashed var(--warn);background:var(--warn-bg);color:var(--ink);border-radius:12px;padding:12px 14px;font-size:14px;max-width:68ch}
+.confirm b{color:var(--warn)}
+
+.cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:700;background:var(--ink);color:var(--bg)}
+.btn.teal{background:var(--teal);color:var(--teal-ink)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+
+/* quiz */
+.quiz{display:grid;gap:18px;background:var(--panel);border-radius:16px;padding:20px}
+.quiz h2{font-size:22px}
+.q{display:grid;gap:8px;border:0;margin:0;padding:0;min-width:0}
+.q legend{font-weight:700;padding:0;margin-bottom:8px}
+.q legend span{color:var(--ink-3);font-family:var(--display);margin-right:6px}
+.opt{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer}
+.opt input{margin-top:4px;accent-color:var(--teal-deep)}
+.opt:has(input:checked){border-color:var(--ink)}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.why{font-size:14px;color:var(--ink-2);padding-left:2px}
+.why b{color:var(--ink)}
+.result{display:grid;gap:6px;border-radius:12px;padding:16px;background:var(--bg)}
+.result h3{font-size:24px}
+.result.pass h3{color:var(--good)}
+.result.fail h3{color:var(--bad)}
+
+/* declaration + certificate */
+.declare{display:grid;gap:12px;border:1.5px solid var(--ink);border-radius:14px;padding:18px}
+.declare label{font-weight:600;font-size:14px;display:grid;gap:6px}
+input[type=text],textarea{font:inherit;padding:10px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+.cert{background:var(--hero);color:var(--hero-fg);border-radius:18px;padding:26px;display:grid;gap:10px}
+.cert .eyebrow{color:var(--teal)}
+.cert h2{font-size:28px}
+.cert p{color:var(--hero-dim)}
+.cert b{color:var(--hero-fg)}
+
+/* team */
+.team{display:grid;gap:14px}
+.person{border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:12px}
+.person-hd{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.who{display:flex;gap:10px;align-items:center;min-width:0}
+.av{width:34px;height:34px;border-radius:50%;flex:none;object-fit:cover;background:var(--panel)}
+.who b{display:block}
+.grid12{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px}
+.cell{font-size:13px;background:var(--panel);border-radius:8px;padding:6px 8px;display:flex;justify-content:space-between;gap:6px;min-width:0}
+.cell span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cell.ok{background:var(--good-bg);color:var(--good)}
+.cell.no{background:var(--bad-bg);color:var(--bad)}
+.signbox{display:grid;gap:8px;background:var(--panel);border-radius:10px;padding:12px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+@media (prefers-reduced-motion:no-preference){.opt,.btn{transition:background .15s,border-color .15s}}
+</style>
+
+<div class="band"><div class="wrap">
+  <a class="brand" href="#"><span class="mark"><i></i></span><b>HMO X <span>Academy</span></b></a>
+  <nav class="tabs" aria-label="Sections">
+    <a href="#" id="tabMine">My training</a>
+    <a href="#team" id="tabTeam" hidden>Team sign-off</a>
+  </nav>
+</div></div>
+<main class="wrap" id="app" aria-live="polite"></main>
+
+<script>
+/*CONTENT*/
+</script>
+<script>
+(function(){
+'use strict';
+const C = window.HMOX_COURSE, M = C.modules, DAY = 864e5;
+const app = document.getElementById('app');
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmtDate = t => t ? new Date(t).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}) : '';
+const pct = x => Math.round(x*100) + '%';
+
+/* ---------- state ---------- */
+const S = {
+  db:null, user:null, me:null, canEdit:false, online:false, loading:true,
+  progress:{modules:{}, history:[], declaration:null},
+  signoff:null,
+  team:{progress:{}, signoffs:{}, profiles:{}},
+  quiz:null, // {id, items:[{qi, order}], answers:{}, done:false, score}
+};
+const LS = 'hmox-academy-local';
+try { const v = JSON.parse(localStorage.getItem(LS) || 'null'); if (v && v.modules) S.progress = v; } catch(e){}
+
+/* ---------- training cycle logic ---------- */
+function cycle(prog, so){
+  const recs = (so && so.records) || [], last = recs[recs.length-1] || null;
+  const req = so && so.refresherRequestedAt || 0;
+  let kind, start = 0, current = false, validUntil = null;
+  if (!last) kind = 'induction';
+  else if (req > last.at || Date.now() - last.at > C.refreshDays*DAY) { kind = 'refresher'; start = last.at; }
+  else { kind = 'complete'; current = true; validUntil = last.at + C.refreshDays*DAY; }
+  const done = id => { const m = prog.modules[id]; return !!(m && m.passedAt && m.passedAt > start); };
+  const passed = M.filter(m => done(m.id)).length;
+  const declared = !!(prog.declaration && prog.declaration.at > start);
+  return {kind, start, last, current, validUntil, done, passed, all: passed === M.length, declared, ready: kind !== 'complete' && passed === M.length && declared};
+}
+function modStatus(id, cyc, prog){
+  const m = prog.modules[id];
+  if (cyc.kind === 'complete') return {cls:'good', text:'Signed off'};
+  if (cyc.done(id)) return {cls:'good', text:'Passed ' + pct(m.best)};
+  if (cyc.kind === 'refresher' && m && m.passedAt) return {cls:'warn', text:'Refresher due'};
+  if (m && m.attempts) return {cls:'bad', text:'Not passed yet'};
+  return {cls:'', text:'Not started'};
+}
+
+/* ---------- saving ---------- */
+let saving = Promise.resolve();
+function saveProgress(){
+  S.progress.updatedAt = Date.now();
+  try { localStorage.setItem(LS, JSON.stringify(S.progress)); } catch(e){}
+  if (!S.db || !S.me) return;
+  const snapshot = JSON.parse(JSON.stringify(S.progress));
+  saving = saving.then(() => S.db.doc('progress/' + S.me).set(snapshot)).catch(e => toast('Your progress could not be saved: ' + (e && e.message || 'try again'), true));
+}
+let toastT;
+function toast(msg, bad){
+  let el = document.getElementById('toast');
+  if (!el){ el = document.createElement('div'); el.id='toast'; el.setAttribute('role','status');
+    el.style.cssText='position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:calc(100% - 32px);padding:10px 16px;border-radius:10px;font-weight:600;font-size:14px;z-index:20;box-shadow:0 6px 24px rgba(0,0,0,.18)';
+    document.body.appendChild(el); }
+  el.style.background = bad ? 'var(--bad)' : 'var(--ink)'; el.style.color = 'var(--bg)';
+  el.textContent = msg; el.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => el.hidden = true, 3200);
+}
+
+/* ---------- routing ---------- */
+function route(){
+  const h = location.hash.replace('#','');
+  document.getElementById('tabTeam').hidden = !S.canEdit;
+  const onTeam = h === 'team' && S.canEdit;
+  document.getElementById('tabMine').toggleAttribute('aria-current', !onTeam); if(!onTeam) document.getElementById('tabMine').setAttribute('aria-current','page');
+  document.getElementById('tabTeam').toggleAttribute('aria-current', onTeam); if(onTeam) document.getElementById('tabTeam').setAttribute('aria-current','page');
+  if (h.startsWith('m-')) { const mod = M.find(m => 'm-' + m.id === h); if (mod) return renderModule(mod); }
+  if (onTeam) return renderTeam();
+  renderHome();
+}
+window.addEventListener('hashchange', () => { S.quiz = null; route(); window.scrollTo(0,0); });
+
+/* ---------- home ---------- */
+function renderHome(){
+  const cyc = cycle(S.progress, S.signoff);
+  const meter = M.map(m => '<i class="' + (cyc.done(m.id) || cyc.kind==='complete' ? 'on' : '') + '"></i>').join('');
+  const title = cyc.kind === 'complete' ? 'You are signed off' : cyc.kind === 'refresher' ? 'Your annual refresher' : 'Your HMO X induction';
+  const lead = cyc.kind === 'complete'
+    ? 'Your training is current until ' + fmtDate(cyc.validUntil) + '. You can revisit any module or retake a quiz to practise.'
+    : cyc.passed + ' of ' + M.length + ' modules passed. Read each module, then pass its quiz with ' + pct(C.passMark) + ' or more.';
+  const steps = [
+    {t:'Pass all 12 quizzes', d: cyc.passed + ' of ' + M.length, s: cyc.all || cyc.current ? 'done' : 'now'},
+    {t:'Sign your declaration', d: cyc.declared || cyc.current ? 'Signed' : 'After the quizzes', s: cyc.declared || cyc.current ? 'done' : cyc.all ? 'now' : ''},
+    {t:'Manager sign-off', d: cyc.current ? 'Signed off ' + fmtDate(cyc.last.at) : cyc.ready ? 'Waiting for your manager' : 'Last step', s: cyc.current ? 'done' : cyc.ready ? 'now' : ''}
+  ];
+  let h = '';
+  if (!S.online && !S.loading) h += '<p class="notice">Progress on this page is saved in this browser only. Open the shared HMO X Academy link while signed in to record results for sign-off.</p>';
+  h += '<section class="summary"><div class="eyebrow">' + (cyc.kind === 'refresher' ? 'Refresher' : 'Induction') + '</div><h1>' + title + '</h1><p class="muted">' + lead + '</p><div class="meter" aria-hidden="true">' + meter + '</div>'
+     + '<ol class="steps">' + steps.map(s => '<li class="' + s.s + '"><b>' + s.t + '</b>' + esc(s.d) + '</li>').join('') + '</ol></section>';
+  if (cyc.current) h += certHTML(cyc);
+  else if (cyc.all) h += declareHTML(cyc);
+  h += '<section class="team"><h2 style="font-size:22px">Modules</h2><ul class="mods">' + M.map((m,i) => {
+    const st = modStatus(m.id, cyc, S.progress);
+    return '<li><a href="#m-' + m.id + '"><span class="n">' + String(i+1).padStart(2,'0') + '</span><span class="txt"><span class="t">' + esc(m.title) + '</span><span class="s">' + esc(m.summary) + ' · ' + m.mins + ' min</span></span><span class="chip ' + st.cls + '">' + st.text + '</span></a></li>';
+  }).join('') + '</ul></section>';
+  app.innerHTML = h;
+  const f = document.getElementById('declForm');
+  if (f) f.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('declName').value.trim();
+    if (!name) { toast('Type your full name to sign', true); return; }
+    S.progress.declaration = {at: Date.now(), name};
+    saveProgress(); toast('Declaration signed'); renderHome();
+  });
+}
+function declareHTML(cyc){
+  if (cyc.declared) return '<section class="declare"><div class="eyebrow">Declaration signed</div><p>You signed on ' + fmtDate(S.progress.declaration.at) + ' as <b>' + esc(S.progress.declaration.name) + '</b>. Your manager will review your results and sign you off.</p>' + (S.online ? '' : '<p class="small muted">This browser is not connected to the shared record, so your manager cannot see it yet.</p>') + '</section>';
+  return '<form class="declare" id="declForm"><div class="eyebrow">Last step for you</div><h2 style="font-size:22px">Sign your declaration</h2>'
+    + '<p>I confirm I have read all ' + M.length + ' modules of the HMO X ' + (cyc.kind === 'refresher' ? 'refresher' : 'induction') + ', passed each quiz myself, and will follow the HMO X rules on evidence, compliance and confidentiality in my work.</p>'
+    + '<label for="declName">Your full name<input type="text" id="declName" autocomplete="name" maxlength="80"></label>'
+    + '<div class="cta"><button class="btn teal" type="submit">Sign declaration</button></div></form>';
+}
+function certHTML(cyc){
+  const by = S.team.profiles[cyc.last.by];
+  return '<section class="cert"><div class="eyebrow">Certificate of completion</div><h2>HMO X ' + (cyc.last.kind === 'refresher' ? 'Training Refresher' : 'Induction') + '</h2>'
+    + '<p><b>' + esc(S.progress.declaration ? S.progress.declaration.name : '') + '</b> passed all ' + M.length + ' modules and was signed off on <b>' + fmtDate(cyc.last.at) + '</b>' + (by && by.name ? ' by <b>' + esc(by.name) + '</b>' : '') + '.</p>'
+    + (cyc.last.note ? '<p>“' + esc(cyc.last.note) + '”</p>' : '')
+    + '<p>Valid until ' + fmtDate(cyc.validUntil) + '. HMO X Ltd · Your community of HMO experts.</p></section>';
+}
+
+/* ---------- module + quiz ---------- */
+function sectionHTML(s){
+  let h = '<section class="sec"><h2>' + esc(s.h) + '</h2>';
+  (s.p || []).forEach(p => h += '<p>' + esc(p) + '</p>');
+  if (s.list) h += '<ul>' + s.list.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+  if (s.terms) h += '<dl class="terms">' + s.terms.map(t => '<div><dt>' + esc(t[0]) + '</dt><dd>' + esc(t[1]) + '</dd></div>').join('') + '</dl>';
+  if (s.cards) h += '<div class="cards">' + s.cards.map(c => '<div class="card"><b>' + esc(c.name) + '</b><span class="role">' + esc(c.role) + '</span><span class="small muted">' + esc(c.text) + '</span></div>').join('') + '</div>';
+  if (s.table) h += '<div class="tbl"><table><thead><tr>' + s.table.head.map(x => '<th>' + esc(x) + '</th>').join('') + '</tr></thead><tbody>' + s.table.rows.map(r => '<tr>' + r.map(x => '<td>' + esc(x) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>';
+  return h + '</section>';
+}
+const shuffle = a => { a = a.slice(); for (let i = a.length-1; i > 0; i--) { const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]] = [a[j],a[i]]; } return a; };
+function startQuiz(mod){
+  S.quiz = {id: mod.id, items: shuffle(mod.questions.map((q,i) => i)).map(qi => ({qi, order: shuffle(mod.questions[qi].o.map((o,i) => i))})), answers:{}, done:false};
+  renderModule(mod, true);
+}
+function renderModule(mod, scrollToQuiz){
+  const i = M.indexOf(mod), cyc = cycle(S.progress, S.signoff), st = modStatus(mod.id, cyc, S.progress), rec = S.progress.modules[mod.id];
+  let h = '<article class="lesson"><header><a class="back" href="#">← All modules</a><div class="eyebrow">Module ' + (i+1) + ' of ' + M.length + ' · ' + mod.mins + ' min</div><h1>' + esc(mod.title) + '</h1><p class="muted">' + esc(mod.summary) + '</p>'
+    + '<div class="row"><span class="chip ' + st.cls + '">' + st.text + '</span>' + (rec && rec.attempts ? '<span class="small muted">' + rec.attempts + ' attempt' + (rec.attempts > 1 ? 's' : '') + ', best ' + pct(rec.best) + '</span>' : '') + '</div></header>';
+  if (S.canEdit && mod.confirm) h += '<p class="confirm"><b>Manager note: content to add.</b> ' + esc(mod.confirm) + ' <span class="muted">Only Editors see this.</span></p>';
+  h += mod.sections.map(sectionHTML).join('');
+  h += '<section class="quiz" id="quiz">' + quizHTML(mod) + '</section></article>';
+  app.innerHTML = h;
+  bindQuiz(mod);
+  if (scrollToQuiz) document.getElementById('quiz').scrollIntoView({block:'start'});
+}
+function quizHTML(mod){
+  const n = mod.questions.length, need = Math.ceil(n * C.passMark - 1e-9);
+  const Q = S.quiz && S.quiz.id === mod.id ? S.quiz : null;
+  if (!Q) return '<div class="eyebrow">Quiz</div><h2>Check your understanding</h2><p class="muted">' + n + ' multiple choice questions. Get ' + need + ' or more right to pass. The questions and answers are shuffled each time.</p><div class="cta"><button class="btn teal" id="qStart" type="button">Start the quiz</button></div>';
+  let h = '<div class="eyebrow">Quiz · ' + n + ' questions</div><h2>' + esc(mod.title) + '</h2>';
+  if (Q.done) {
+    const pass = Q.score >= C.passMark;
+    h += '<div class="result ' + (pass ? 'pass' : 'fail') + '"><h3>' + (pass ? 'Passed' : 'Not passed yet') + ': ' + Q.right + ' of ' + n + ' (' + pct(Q.score) + ')</h3><p class="muted">' + (pass ? 'This module is recorded as passed.' : 'You need ' + need + ' of ' + n + '. Read the explanations below, then try again.') + '</p></div>';
+  }
+  h += '<form id="qForm" style="display:grid;gap:18px">' + Q.items.map((it, k) => {
+    const q = mod.questions[it.qi], chosen = Q.answers[k];
+    return '<fieldset class="q"><legend><span>' + (k+1) + '.</span>' + esc(q.q) + '</legend>' + it.order.map(oi => {
+      let cls = 'opt';
+      if (Q.done) { if (oi === q.a) cls += ' right'; else if (oi === chosen) cls += ' wrong'; }
+      const id = 'q' + k + 'o' + oi;
+      return '<label class="' + cls + '" for="' + id + '"><input type="radio" name="q' + k + '" id="' + id + '" value="' + oi + '"' + (chosen === oi ? ' checked' : '') + (Q.done ? ' disabled' : '') + '><span>' + esc(q.o[oi]) + '</span></label>';
+    }).join('') + (Q.done ? '<p class="why"><b>' + (chosen === q.a ? 'Correct.' : 'The answer: ' + esc(q.o[q.a]) + '.') + '</b> ' + esc(q.why) + '</p>' : '') + '</fieldset>';
+  }).join('');
+  h += '<div class="cta">' + (Q.done ? '<button class="btn teal" type="button" id="qAgain">Take it again</button><a class="btn ghost" href="#" style="text-decoration:none">Back to modules</a>' + nextLink(mod)
+                                     : '<button class="btn teal" type="submit" id="qSubmit">Submit answers</button><span class="small muted" id="qLeft"></span>') + '</div></form>';
+  return h;
+}
+function nextLink(mod){ const nx = M[M.indexOf(mod)+1]; return nx ? '<a class="btn" href="#m-' + nx.id + '" style="text-decoration:none">Next module</a>' : ''; }
+function bindQuiz(mod){
+  const start = document.getElementById('qStart'); if (start) start.onclick = () => startQuiz(mod);
+  const again = document.getElementById('qAgain'); if (again) again.onclick = () => startQuiz(mod);
+  const form = document.getElementById('qForm'); if (!form || S.quiz.done) return;
+  const left = () => { const n = S.quiz.items.length - Object.keys(S.quiz.answers).length; document.getElementById('qLeft').textContent = n ? n + ' still to answer' : ''; };
+  form.addEventListener('change', e => { const m = e.target.name.match(/^q(\d+)$/); if (m) S.quiz.answers[+m[1]] = +e.target.value; left(); });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const Q = S.quiz; if (Object.keys(Q.answers).length < Q.items.length) { left(); toast('Answer every question first', true); return; }
+    Q.right = Q.items.reduce((s, it, k) => s + (Q.answers[k] === mod.questions[it.qi].a ? 1 : 0), 0);
+    Q.score = Q.right / Q.items.length; Q.done = true;
+    record(mod.id, Q.score);
+    renderModule(mod, true);
+  });
+}
+function record(id, score){
+  const now = Date.now(), m = S.progress.modules[id] || {attempts:0, best:0};
+  m.attempts = (m.attempts || 0) + 1; m.last = score; m.lastAt = now;
+  if (score >= C.passMark) { m.passedAt = now; m.best = Math.max(m.best || 0, score); }
+  else m.best = Math.max(m.best || 0, score);
+  S.progress.modules[id] = m;
+  S.progress.history = (S.progress.history || []).concat({m:id, s:Math.round(score*1000)/1000, at:now}).slice(-200);
+  saveProgress();
+  if (score >= C.passMark) toast('Module passed');
+}
+
+/* ---------- team sign-off (Editors) ---------- */
+let teamSubs = false, signFor = null;
+function subscribeTeam(){
+  if (teamSubs || !S.db || !S.canEdit) return; teamSubs = true;
+  S.db.collection('progress').onSnapshot(snap => { const o = {}; snap.docs.forEach(d => o[d.id] = d.data()); S.team.progress = o; loadProfiles(); if (location.hash === '#team') renderTeam(); }, () => {});
+  S.db.collection('signoffs').onSnapshot(snap => { const o = {}; snap.docs.forEach(d => o[d.id] = d.data()); S.team.signoffs = o; loadProfiles(); if (location.hash === '#team') renderTeam(); }, () => {});
+}
+async function loadProfiles(){
+  if (!S.user) return;
+  const ids = new Set(Object.keys(S.team.progress));
+  Object.values(S.team.signoffs).forEach(so => (so.records || []).forEach(r => r.by && ids.add(r.by)));
+  (S.signoff && S.signoff.records || []).forEach(r => r.by && ids.add(r.by));
+  if (!ids.size) return;
+  try { S.team.profiles = await S.user.profiles([...ids]); } catch(e) {}
+  route();
+}
+function renderTeam(){
+  const ids = Object.keys(S.team.progress);
+  let h = '<section class="summary"><div class="eyebrow">Managers</div><h1>Team sign-off</h1><p class="muted">Everyone who has started training, with their quiz results. Learners write their own results; only they can change them. You sign off once someone has passed every module and signed their declaration. Sign-off lasts ' + C.refreshDays + ' days, then the refresher starts.</p></section>';
+  if (!S.online) h += '<p class="notice">Team results appear when this page is open from the shared link while signed in.</p>';
+  else if (!ids.length) h += '<p class="notice">No one has started yet. Share this page with your team as Contributors (so they can save their results), and their progress will appear here as they take quizzes.</p>';
+  const order = ids.map(id => ({id, p:S.team.progress[id], so:S.team.signoffs[id], cyc:cycle(S.team.progress[id], S.team.signoffs[id])}))
+    .sort((a,b) => (b.cyc.ready - a.cyc.ready) || (a.cyc.passed - b.cyc.passed));
+  h += '<div class="team">' + order.map(personHTML).join('') + '</div>';
+  app.innerHTML = h;
+  app.querySelectorAll('[data-sign]').forEach(b => b.onclick = () => { signFor = b.dataset.sign; renderTeam(); const t = document.getElementById('signNote'); if (t) t.focus(); });
+  app.querySelectorAll('[data-cancel]').forEach(b => b.onclick = () => { signFor = null; renderTeam(); });
+  app.querySelectorAll('[data-confirm]').forEach(b => b.onclick = () => signOff(b.dataset.confirm));
+  app.querySelectorAll('[data-refresh]').forEach(b => b.onclick = () => requestRefresher(b.dataset.refresh));
+}
+function personHTML(x){
+  const pr = S.team.profiles[x.id] || {}, name = pr.name || (x.p.declaration && x.p.declaration.name) || 'Team member', c = x.cyc;
+  const state = c.current ? {cls:'good', t:'Signed off to ' + fmtDate(c.validUntil)} : c.ready ? {cls:'ink', t:'Ready for sign-off'} : c.kind === 'refresher' ? {cls:'warn', t:'Refresher: ' + c.passed + '/' + M.length} : {cls:'', t:'Induction: ' + c.passed + '/' + M.length};
+  let h = '<div class="person"><div class="person-hd"><div class="who">' + (pr.avatarUrl && /^https:\/\//.test(pr.avatarUrl) ? '<img class="av" alt="" src="' + esc(pr.avatarUrl) + '">' : '<span class="av"></span>') + '<div><b>' + esc(name) + '</b><span class="small muted">Last activity ' + fmtDate(x.p.updatedAt) + (x.p.declaration && x.p.declaration.at > c.start ? ' · declaration signed ' + fmtDate(x.p.declaration.at) : '') + '</span></div></div><span class="chip ' + state.cls + '">' + state.t + '</span></div>';
+  h += '<div class="grid12">' + M.map((m,i) => { const r = x.p.modules[m.id]; const ok = c.done(m.id) || c.current; return '<div class="cell ' + (ok ? 'ok' : r && r.attempts ? 'no' : '') + '" title="' + esc(m.title) + '"><span>' + (i+1) + '. ' + esc(m.title) + '</span><span>' + (r && r.attempts ? pct(r.best) : '–') + '</span></div>'; }).join('') + '</div>';
+  const recs = (x.so && x.so.records) || [];
+  if (recs.length) h += '<p class="small muted">History: ' + recs.map(r => { const b = S.team.profiles[r.by]; return (r.kind === 'refresher' ? 'Refresher' : 'Induction') + ' signed off ' + fmtDate(r.at) + (b && b.name ? ' by ' + esc(b.name) : ''); }).join('; ') + '</p>';
+  if (x.id === S.me) h += '<p class="small muted">This is you. Someone else should sign off your own training.</p>';
+  else if (c.ready) {
+    h += signFor === x.id
+      ? '<div class="signbox"><label class="small" for="signNote"><b>Sign-off note (optional)</b></label><textarea id="signNote" rows="2" maxlength="300" placeholder="For example: discussed modules 5 and 8 in our 1:1"></textarea><div class="row"><button class="btn teal" type="button" data-confirm="' + esc(x.id) + '">Confirm sign-off</button><button class="btn ghost" type="button" data-cancel="1">Cancel</button></div></div>'
+      : '<div class="row"><button class="btn teal" type="button" data-sign="' + esc(x.id) + '">Sign off ' + (c.kind === 'refresher' ? 'refresher' : 'induction') + '</button></div>';
+  } else if (c.current) h += '<div class="row"><button class="btn ghost" type="button" data-refresh="' + esc(x.id) + '">Start refresher now</button><span class="small muted">Otherwise it starts on ' + fmtDate(c.validUntil) + '.</span></div>';
+  return h + '</div>';
+}
+async function signOff(uid){
+  const p = S.team.progress[uid], so = S.team.signoffs[uid] || {records:[]}, c = cycle(p, so);
+  if (!c.ready) return;
+  const noteEl = document.getElementById('signNote');
+  const scores = {}; M.forEach(m => scores[m.id] = Math.round((p.modules[m.id] || {}).best * 1000) / 1000 || 0);
+  const next = {records: (so.records || []).concat({at: Date.now(), by: S.me, kind: c.kind, note: noteEl ? noteEl.value.trim().slice(0,300) : '', scores}), refresherRequestedAt: so.refresherRequestedAt || 0};
+  try { await S.db.doc('signoffs/' + uid).set(next); signFor = null; toast('Signed off'); }
+  catch(e){ toast('Sign-off was not saved: ' + (e && e.message || 'try again'), true); }
+}
+async function requestRefresher(uid){
+  const so = S.team.signoffs[uid] || {records:[]};
+  try { await S.db.doc('signoffs/' + uid).set({records: so.records || [], refresherRequestedAt: Date.now()}); toast('Refresher started'); }
+  catch(e){ toast('Could not start the refresher: ' + (e && e.message || 'try again'), true); }
+}
+
+/* ---------- connect ---------- */
+route();
+(async function connect(){
+  const timer = setTimeout(() => { S.loading = false; route(); }, 10000);
+  try {
+    if (!window.claude || !window.claude.use) throw 0;
+    const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')]);
+    S.user = user;
+    if (!db || !user) throw 0;
+    S.db = db; S.me = await user.id();
+    S.canEdit = !!(await user.canEdit());
+    S.online = true;
+    let first = true;
+    db.doc('progress/' + S.me).onSnapshot(snap => {
+      clearTimeout(timer); S.loading = false;
+      if (snap.exists) S.progress = Object.assign({modules:{}, history:[], declaration:null}, snap.data());
+      else if (first && Object.keys(S.progress.modules).length) saveProgress(); // carry over anything done before connecting
+      first = false;
+      if (!S.quiz) route(); else if (location.hash.startsWith('#m-')) {/* keep the open quiz */}
+    }, () => { S.online = false; S.loading = false; route(); });
+    db.doc('signoffs/' + S.me).onSnapshot(snap => { S.signoff = snap.exists ? snap.data() : null; loadProfiles(); if (!S.quiz) route(); }, () => {});
+    subscribeTeam();
+  } catch(e) { clearTimeout(timer); S.loading = false; route(); }
+})();
+})();
+</script>
