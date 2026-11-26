@@ -106,7 +106,7 @@ window.HMOX_COURSE = {
           ['Find My Next HMO', 'Online tool, about 4 minutes: the regions and towns that suit the buyer\'s money, experience and how hands-on they want to be, the price range their capital reaches, and matching HMO X stock.', 'Free'],
           ['Buyer Valuation Pack', 'Tier diagnosis, basis of value, comparables and lender guidance for an HMO they are buying.', 'Standard on every HMO X listing'],
           ['Property Information Report', 'Every buyer gets one with their purchase: the compliance bundle and due-diligence data.', 'Included'],
-          ['GDV Appraisal', 'Refinance and sales GDV for a conversion or development, and the price at which it stacks.', '£99 launch price (RRP £299) for the instant appraisal; hand-prepared 13-section report for thin-evidence towns'],
+          ['GDV Appraisal', 'Refinance and sales GDV for a conversion or development, and the price at which it stacks.', '£99 launch price (RRP £299) for the instant appraisal, which is the one to recommend first; a hand-prepared 13-section report is still available for thin-evidence towns'],
           ['Location Intelligence Report', 'Where and why to buy: room demand, rents, sales, tenant pool, licensing and Article 4 risk.', '£99 launch price (RRP £199); bespoke from £299']
         ]}},
         { h: 'Our online tools', terms: [
@@ -132,7 +132,6 @@ window.HMOX_COURSE = {
           'Nothing is published to the website, GoHighLevel, Jotform or the Team Analyser without Richard\'s OK.'
         ]}
       ],
-      confirm: 'Confirm the hand-prepared GDV price (£395 in May).',
       questions: [
         { q: 'What is the Committed Sale fee?', o: ['£400 onboarding + 2%, minimum £4,000, plus VAT', '£600 onboarding + 2.5%, no minimum', '1.5% with no onboarding fee', '£995 fixed'], a: 0, why: 'The current terms are £400 + 2%, minimum £4,000 + VAT, with the onboarding fee deducted on completion.' },
         { q: 'What is the HMO X Auctions fee?', o: ['£400 onboarding + 2.5%, minimum £5,000, plus VAT', '£400 onboarding + 2%, minimum £4,000', '£150, credited', '10% of the hammer price'], a: 0, why: 'There is also an option for the buyer to pay half the fee.' },
@@ -716,7 +715,7 @@ window.HMOX_COURSE = {
           'Where sources conflict, log it and say so. Never resolve it silently.'
         ]}
       ],
-      confirm: 'Add HMO X\'s service standards (response times for calls and emails, how often sellers are updated), the complaints process and the property redress scheme we belong to. None of these were found in Drive.',
+      confirm: 'Holly is redoing the complaints and policy pages this week; Richard will add the redress scheme, complaints process and service response times here once they are done.',
       questions: [
         { q: 'Which line describes the HMO X voice?', o: ['We do not pitch. We brief.', 'Always be closing.', 'Every HMO is an incredible opportunity.', 'Say yes, then work it out.'], a: 0, why: 'We speak as a specialist briefing a client, not a salesperson closing one.' },
         { q: 'Which phrase should never appear in an HMO X listing?', o: ['"Stunning opportunity, going fast!"', '"Fully let, licensed for six"', '"13.00% gross, bills included"', '"Lawful C4 use confirmed by LDC"'], a: 0, why: 'No estate-agent language and no hype.' },

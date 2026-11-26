@@ -20,7 +20,7 @@ Team induction and annual refresher for HMO X. Published (owner: Richard) at htt
 
 ## Open items (as of 26 Nov 2026, after the Hub read)
 1. Done: the Hub has its own module (`hub`, the third module) from the Mighty Hub. Hub pages that are out of date (Hub Lite pricing, unnamed bench entries, the Self-Operators and RRA course spaces) are being changed or removed by Holly: leave them out of the course.
-2. Committed Sale minimum: course uses £4,000 (newest files); the Team Analyser wording says £5,000. Not in the Hub or on hmox.co.uk. Confirm with Richard.
+2. Done: Committed Sale minimum fee £4,000; HMO X Auctions minimum fee £5,000 (Richard, 26 Nov). Hand-prepared GDV stays in the course, but the instant GDV Appraisal is the one to push.
 3. Done: Value My HMO is £19.99 + VAT launch price (RRP £99 + VAT), from hmox.co.uk (updated 25 Nov 2026). The Hub is free for 12 months, to 31 December 2027, while the tools and analysers launch (Richard, 26 Nov).
-4. Redress scheme, complaints process, service response times: not in the Hub or on hmox.co.uk.
+4. Redress scheme, complaints process, service response times: Holly is redoing the policy pages this week and Richard will add them. Do not invent them.
 5. Day one: the Hub part is now in the intro module. Still needed: hours, other logins, buddy, and the January senior salesperson induction. Also whether Hitesh belongs on the team page.
