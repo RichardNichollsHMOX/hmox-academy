@@ -786,7 +786,7 @@ window.HMOX_COURSE = {
           "Each of the five lens spaces is built the same way: Introduction, Framework, Diagnostic, Worked Scheme and Expert layer, so members always know their way around."
         ]},
         { h: "What every member shares", terms: [
-          ["Weekly Community Call", "Every Tuesday at 7pm: a market update, a deal clinic, an expert deep dive and live Q&A. Recordings go into the archive and a written companion guide follows in the matching lens space."],
+          ["Weekly Community Call", "Every Tuesday at 7pm: a market update, an expert deep dive and live Q&A. Recordings go into the archive and a written companion guide follows in the matching lens space."],
           ["Find My Next HMO", "Our free buyer tool replaced the Deal Thread and Source-To-Order: a buyer gives their money, experience and how hands-on they want to be, and it matches HMO X stock (live Committed Sale and auction lots, coming soon and recent sales) to their brief."],
           ["Tools from every guide", "Each guide ends with one tool card: the Tier Test, Value My HMO, the GDV Appraisal, Find My Next HMO or the full tools page."],
           ["Community Callout", "A weekly Newsfeed thread where members post whatever is on their desk; every question is answered."]
@@ -810,7 +810,7 @@ window.HMOX_COURSE = {
         { q: "A prospect asks what the Hub costs. What do you say?", o: ["It is free to join until the end of 2027", "£499 + VAT a year", "£49 + VAT a month", "£19.99 a month"], a: 0, why: "The Hub is free for 12 months, to 31 December 2027, while we launch our tools and analysers." },
         { q: "A buyer asks how to find HMO X stock that suits them. Where do you send them?", o: ["Find My Next HMO, our free buyer tool", "The Deal Thread", "Source-To-Order", "Hub Lite"], a: 0, why: "Find My Next HMO matches our stock to their brief. The Deal Thread, Source-To-Order and Hub Lite have closed." },
         { q: "What does every guide in the Hub end with?", o: ["One card linking to the HMO X tool that fits it", "A booking calendar", "A Hub membership offer", "Nothing"], a: 0, why: "One next step per guide, always a tool." },
-        { q: "When is the weekly Community Call?", o: ["Tuesdays at 7pm", "Mondays at 9am", "The first Friday of each month", "Whenever there is news"], a: 0, why: "Market update, deal clinic, expert deep dive and live Q&A." },
+        { q: "When is the weekly Community Call?", o: ["Tuesdays at 7pm", "Mondays at 9am", "The first Friday of each month", "Whenever there is news"], a: 0, why: "Market update, expert deep dive and live Q&A." },
         { q: "Where do the Deals links in the Hub go?", o: ["Our live Committed Sale and auction listing pages", "A private Deal Thread", "Rightmove", "The Video Library"], a: 0, why: "Deals links to committedsale.hmox.co.uk and auctions.hmox.co.uk." },
         { q: "A member posts a case study naming the tenant and the street. What should happen?", o: ["Remove the names and address", "Leave it; members are vetted", "Pin it as a good example", "Move it to the Video Library"], a: 0, why: "No client names, addresses or private figures in the Hub." }
       ]
@@ -823,7 +823,7 @@ window.HMOX_COURSE = {
       mins: 15,
       summary: "The people behind HMO X, the specialists we work with, and where questions go.",
       sections: [
-        { h: "The team", p: ["We work as one cross-disciplined team rather than separate auction and sales camps. These are the people clients meet on a call, at a Deal Clinic or on the Community Call."], cards: [
+        { h: "The team", p: ["We work as one cross-disciplined team rather than separate auction and sales camps. These are the people clients meet on a call, at a viewing or on the Community Call."], cards: [
           { name: "Richard Nicholls", role: "Senior Valuer & BDM", text: "Author of the Tier Methodology. Responsible for every client valuation and report, auction guides and reserves, and host of the weekly Community Call." },
           { name: "Richard Parsons", role: "Valuations Coordinator", text: "The first port of call for landlords thinking about selling, from a single HMO to a portfolio. 15+ years as an HMO investor." },
           { name: "Francesca (Fran) Perry", role: "Office Manager & Client Onboarding", text: "First point of contact for appraisals, reports and seller onboarding, making sure every property is compliant and ready. 200+ HMOs onboarded." },
