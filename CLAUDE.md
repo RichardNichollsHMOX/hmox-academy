@@ -22,7 +22,7 @@ A general introduction to HMO X and to HMOs, for anyone joining the business wha
 Newest wins, in this order: Richard's own instructions; hmox.co.uk (25 Nov 2026); the Tier Methodology Edition 2; the Hub lessons (May to Nov 2026); older Drive files. The Hub lessons disagree with each other in places (tier slippage speed, ICR figures, worked examples), so never copy a Hub figure without checking it against the newer sources.
 
 ## Open items (as of 26 Nov 2026)
-1. Auction entry fee: course uses £400 onboarding (newest files); the Hub's Exit Planning lesson says £600 + VAT entry fee, plus a £1,250 + VAT buyer admin fee. Confirm with Richard.
-2. Launch premium length: course uses 12 to 24 months (Edition 2); the Hub lessons say 12 to 18 months.
+1. Underwriting blend and the Section 8 arrears threshold (Hub Ep. 17): Richard to check. Also whether the £1,250 + VAT auction buyer admin fee is current.
+2. Hub content fixes for Holly are listed in the doc https://claude.ai/artifact/H6e8Xx8id53LE7oyEWA6ut.
 3. Redress scheme, complaints process, service response times: Holly is redoing the policy pages; Richard will add them. Do not invent them.
-4. Done and confirmed by Richard (26 Nov): Committed Sale minimum £4,000; Auction minimum £5,000; Value My HMO £19.99 + VAT launch price; Hub free to 31 Dec 2027 while the tools launch; hand-prepared GDV stays but push the instant GDV; Hitesh not on the team page; out-of-date Hub pages are Holly's to fix.
+4. Done and confirmed by Richard (26 Nov): Committed Sale minimum £4,000; Auction minimum £5,000; Value My HMO £19.99 + VAT launch price; Hub free to 31 Dec 2027 while the tools launch; hand-prepared GDV stays but push the instant GDV; Hitesh not on the team page; £400 onboarding for both Committed Sale and Auctions (made the same, with a discount for multiple listings); launch premium 12 to 24 months; lender LTV/ICR figures never printed, always "confirm live with a broker"; out-of-date Hub pages are Holly's to fix.
