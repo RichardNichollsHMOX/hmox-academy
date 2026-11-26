@@ -64,12 +64,18 @@ window.HMOX_COURSE = {
           'What would it cost to move up a tier, or what is the risk of sliding?',
           'What is the right HMO X next step?'
         ]},
+        { h: 'Your first week: the Hub', list: [
+          'You are given a Team Subscription to the Hub (mighty.hmox.co.uk), free for as long as you work with us. It shows you exactly what members see.',
+          'Complete the Hub welcome checklist (it earns the Getting Started badge) and fill in your profile.',
+          'Read the Chassis and the Tier Methodology module in Our Fundamentals, then the introduction to each of the five lens spaces.',
+          'Join the next Tuesday Community Call at 7pm, and read this week\'s Deal Thread.'
+        ]},
         { h: 'How this induction works', p: [
-          'There are 12 modules. Read each one, then take its quiz. You need 80% to pass, and you can retake a quiz as many times as you need. Each attempt shuffles the questions and answers.',
+          'There are 13 modules. Read each one, then take its quiz. You need 80% to pass, and you can retake a quiz as many times as you need. Each attempt shuffles the questions and answers.',
           'When you have passed every module, sign the declaration on your home screen. Your manager then reviews your results and signs you off. Sign-off lasts 12 months, after which you take the refresher.'
         ]}
       ],
-      confirm: 'Add day-one practicalities: hours, logins (GHL, Trello, Apex27, the Hub), who each new starter\'s buddy is, and the January four-week induction plan for the new senior salesperson.',
+      confirm: 'The Hub part of day one is now in. Still to add: hours, the other logins (GHL, Trello, Apex27), who each new starter\'s buddy is, and the January four-week induction plan for the new senior salesperson.',
       questions: [
         { q: 'What is HMO X\'s line on every report?', o: ['Your community of HMO experts', 'Where expertise drives opportunity', 'Your community of property experts', 'Sell your HMO with certainty'], a: 0, why: '"Your community of HMO experts." is current. The other lines are older or not ours.' },
         { q: 'Which asset class is HMO X built for?', o: ['HMOs only', 'HMOs and buy-to-let', 'HMOs and serviced accommodation', 'Any residential investment'], a: 0, why: 'Not buy-to-let, not commercial, not serviced accommodation.' },
@@ -82,7 +88,7 @@ window.HMOX_COURSE = {
 
     {
       id: 'services',
-      title: 'Services, products, tools and the Hub',
+      title: 'Services, products and tools',
       mins: 20,
       summary: 'What we offer sellers, buyers, operators and developers, what it costs, and the tools behind it.',
       sections: [
@@ -106,7 +112,8 @@ window.HMOX_COURSE = {
         { h: 'Our online tools', terms: [
           ['Value My HMO', 'An instant valuation: likely sale range, suggested asking price, speed versus value, buyer demand score, nearest comparables and how to lift value.'],
           ['Tier Test', 'The full Tier Methodology report: home tier, what holds it back, rent against its tier, a lender\'s view and the evidence pack. £99 + VAT at launch (£299 list), credited to your sales commission. Never call it free.'],
-          ['Credit rule', 'Every tool fee is credited in full against the client\'s next HMO X service within 12 months.']
+          ['Credit rule', 'Every tool fee is credited in full against the client\'s next HMO X service within 12 months.'],
+          ['The five tools', 'Value My HMO, Tier Test, GDV Appraisal, Find My Next HMO and the Location Intelligence Report launch together with the new website. Richard walks members through them live on the Community Call on Tuesday 1 December 2026 at 7pm. Every answer rests on evidence our team has gathered and checked by hand.']
         ]},
         { h: 'Behind the scenes', terms: [
           ['Team Analyser', 'Our buyer demand engine. For any HMO in the 320-town grid: a score from 0 to 5, five reads, a price lever, route fit, comparables, room rents and our valuation register.'],
@@ -115,8 +122,7 @@ window.HMOX_COURSE = {
           ['Interactive reports', 'Valuations can be issued as private web reports with their own link, alongside the PDF. Figures must match the PDF exactly, and Richard approves them before they go.']
         ]},
         { h: 'The Hub', p: [
-          'The Hub is our community for HMO investors. It includes Tuesday Live at 7pm, the Deal Thread (vetted buyers see new HMOs 48 hours early), location and market intelligence, a monthly compliance briefing, Deal Clinics, two six-week courses a year and discounted rates with our partners.',
-          'Hub Lite is the free entry level, with our Fundamentals modules. Membership of the full Hub is free until 31 December 2027, and every paid report includes 12 months of Hub membership.'
+          'The Hub is our community for HMO investors: the weekly Community Call, the Deal Thread, Source-To-Order, Location Intelligence Reports, the Compliance Briefing and the lens courses. Hub Lite is the free entry level. Joining the full Hub is free until 31 December 2027, and every client who completes a purchase or paid service gets a gifted 12-month Hub year. The next module covers the Hub in full.'
         ]},
         { h: 'Rules that apply to every product', list: [
           'Our tools and reads support a valuation; they are never a value opinion on their own.',
@@ -125,15 +131,103 @@ window.HMOX_COURSE = {
           'Nothing is published to the website, GoHighLevel, Jotform or the Team Analyser without Richard\'s OK.'
         ]}
       ],
-      confirm: 'Check against the Hub (Mighty): the Hub\'s sections, how members join, and what each role does there. Confirm the Value My HMO price: some files say free, the tools notes say £19.99. Confirm the hand-prepared GDV price (£395 in May).',
+      confirm: 'Confirm the Value My HMO price: some files say free, the tools notes say £19.99. Confirm the hand-prepared GDV price (£395 in May).',
       questions: [
         { q: 'What is the Committed Sale fee?', o: ['£400 onboarding + 2%, minimum £4,000, plus VAT', '£600 onboarding + 2.5%, no minimum', '1.5% with no onboarding fee', '£995 fixed'], a: 0, why: 'The current terms are £400 + 2%, minimum £4,000 + VAT, with the onboarding fee deducted on completion.' },
         { q: 'What is the HMO X Auctions fee?', o: ['£400 onboarding + 2.5%, minimum £5,000, plus VAT', '£400 onboarding + 2%, minimum £4,000', '£150, credited', '10% of the hammer price'], a: 0, why: 'There is also an option for the buyer to pay half the fee.' },
         { q: 'What does a strategy call (CSA) with Richard cost?', o: ['£150 + VAT, credited against the route chosen', 'Free', '£995 + VAT', '£99 + VAT'], a: 0, why: 'The sales valuation itself is free; the 30-minute CSA call is £150, credited.' },
         { q: 'A client asks if the Tier Test is free. What do you say?', o: ['It is £99 + VAT at launch, credited to your sales commission', 'Yes, it is free', 'Only for auction sellers', 'It is £995'], a: 0, why: 'It used to be free. It is now £99 + VAT and must never be called free.' },
         { q: 'Which service suits an owner who is holding, not selling?', o: ['HMO Health Check', 'Committed Sale', 'HMO X Auctions', 'Back to Resi'], a: 0, why: 'The Health Check is a hold-and-review diagnostic with a visit from Richard.' },
-        { q: 'What happens to a tool fee if the client then uses another HMO X service?', o: ['It is credited in full within 12 months', 'It is refunded on request', 'Nothing; fees are not credited', 'It is converted into Hub credit'], a: 0, why: 'Every tool fee is credited against the next HMO X service within 12 months.' },
-        { q: 'What do Deal Thread members in the Hub get?', o: ['48 hours\' early sight of new HMOs', 'A discount on the purchase price', 'Free Tier Tests for life', 'Guaranteed acceptance of offers'], a: 0, why: 'Vetted buyers on the Deal Thread see new HMOs 48 hours before the wider market.' }
+        { q: 'What happens to a tool fee if the client then uses another HMO X service?', o: ['It is credited in full within 12 months', 'It is refunded on request', 'Nothing; fees are not credited', 'It is converted into Hub credit'], a: 0, why: 'Every tool fee is credited against the next HMO X service within 12 months.' }
+      ]
+    },
+
+    {
+      id: 'hub',
+      title: 'The HMO X Hub',
+      mins: 20,
+      summary: 'Our community platform for HMO investors: how it is laid out, how people join, what members get and what each of us does there.',
+      sections: [
+        { h: 'What the Hub is', p: [
+          'The HMO X Hub is our online community for HMO investors, at mighty.hmox.co.uk (built on the Mighty Networks platform, with an app as well as the website). Its line is "Your community of HMO experts."',
+          'It is built for investors who have started, or own several HMOs, not for people learning what an HMO is. The Hub describes itself as "one framework, five lenses, one room": everything in it runs on the Tier Methodology and reads through the same five lenses we use in our reports.',
+          'Hub Lite is the free front door. The Hub is the room itself. In the Hub\'s own words: "Hub Lite is the door. The Hub is the room."'
+        ]},
+        { h: 'How the Hub is laid out', p: ['The left-hand navigation is grouped into five collections:'], table: { head: ['Collection', 'Spaces', 'What is in them'], rows: [
+          ['Community', 'Newsfeed; Welcome to Hub; Welcome to Hub Lite', 'Announcements, call reminders and recordings, the weekly Community Callout, and the welcome pages for each level.'],
+          ['Deals', 'Deals (the Deal Thread and Deal Vault); Source-To-Order', 'HMO X stock before it reaches the open market, each new listing with its Property Information Report, plus sold listings. Source-To-Order is where members submit a buying brief.'],
+          ['Analyse', 'Location Intelligence Reports', 'Full town reports, filed by region (for example Northampton, Derby, Portsmouth, Poole, Grimsby and Cleethorpes, all Q3 2026 editions).'],
+          ['Learn', 'Our Fundamentals; the five lens spaces; Video Library', 'The written modules, the lens courses, and recordings such as the Renters\' Rights Act series.'],
+          ['Events', 'Hub Events; Hub Lite Events', 'The weekly Community Call and its archive of recordings, episode by episode.']
+        ]}},
+        { h: 'Our Fundamentals and the Chassis', p: [
+          'Our Fundamentals is the reading library open to everyone, including Hub Lite. It starts with the Chassis: "Your Starting Point" (ownership structure, professional team, tax position and accounting discipline) and the HMO X Glossary.',
+          'Then nine specialist modules, each credited to the person who does that work every day: the HMO X Tier Methodology, Buying your first HMO, Growing your Portfolio and Exit Planning and Selling (Richard Nicholls); Compliance and Legislation (Alice Ibbotson); Planning and Licensing (Carianne Wells); Financing and Leveraging (George Sanford); Working with a Managing Agent; and Self-Management.',
+          'Every module ends the same way, with a "Page to Portfolio" step: the reader\'s specific next move. The same space also holds the monthly companion guides written up from the Community Call, and the Renters\' Rights Act companion course.'
+        ]},
+        { h: 'The five lens spaces', p: ['Each lens is its own space, built the same way so members always know their way around: Introduction, Framework, Diagnostic, Worked Scheme, Expert layer and Case study. Members can hold as many lenses as apply to them.'], table: { head: ['Hub space', 'Lens', 'Its rule'], rows: [
+          ['Investor & Buyer', 'Buyers', 'Buy the tier it holds, not the price it asks.'],
+          ['Operator', 'Operators', 'Operate to the tier it holds, not the rooms it fills.'],
+          ['Add Value', 'Rejuvenators (Tier 4 and Tier 5 assets)', 'Spec to the tier it holds, not past it.'],
+          ['Developer', 'Developers', 'Leverage to the tier it holds, not the tier it performs.'],
+          ['Exit & Seller', 'Sellers (the realisation lens)', 'Sell the tier it holds, on the timeline you chose.']
+        ]}},
+        { h: 'The spine every member shares', terms: [
+          ['Weekly Community Call (Tuesday Live)', 'Every Tuesday at 7pm, hosted by Richard Nicholls with a rotating guest expert: market update, deal clinic, expert deep dive and live Q&A. One call a month is open to Hub Lite; the others are for full members. Recordings go into Hub Events, and a written companion guide follows in the matching lens space.'],
+          ['The Deal Thread', 'What Richard and the valuations team are valuing, onboarding and launching. Members see every new listing 48 hours before the open market, and can request details and book viewings before launch.'],
+          ['The Deal Vault', 'Every newly launched property with its Property Information Report: 16 sections reading the asset end to end, from the investment verdict to the compliance and evidence pack.'],
+          ['Source-To-Order', 'A member tells us their brief (tier, area, the numbers that need to work) and we search the market against it, with a dedicated point of contact. It is included in Hub membership, with no sourcing fee or percentage. It is for buyers ready to act, not exploring.'],
+          ['Location and Market Intelligence', 'Location Intelligence Reports, comparables and market commentary, kept current and meant to be read at the decision point.'],
+          ['The Compliance Briefing', 'Alice Ibbotson\'s monthly regulatory update: what has changed, what it means, and what to check.'],
+          ['The expert panel', 'Managing agents, lawyers, accountants, planners, developers and experienced landlords, feeding the weekly call and the written material that follows.']
+        ]},
+        { h: 'How people join', table: { head: ['Route', 'Who it is for', 'What they get'], rows: [
+          ['Hub Lite', 'Anyone who registers', 'Free. Our Fundamentals, the Tier Methodology Guide and the monthly open call. Every registration is offered a 15-minute call with a member of the team, who routes them honestly.'],
+          ['Hub Subscription', 'Investors who want the full room', 'Every lens space and the full spine. Hub Lite members upgrade themselves in under a minute: Personal Settings, Plans and Access, Change Plan, Hub Subscription.'],
+          ['Gifted year (Client Subscription)', 'Every client who completes a purchase or a paid service with us (an auction or Committed Sale purchase, a GDV, an Exit Plan, a Health Check)', 'Twelve months of full Hub membership from completion day, even if they are already a member. Nothing to sign up for.'],
+          ['Seller Subscription (Hub Seller\'s Plan)', 'Committed Sale sellers', 'A free, permanent account: all of Hub Lite plus the Exit & Seller space.'],
+          ['Expert Tier', 'Specialists who contribute to the calls and content', 'Free permanent Hub access and named credit.'],
+          ['Founding Tier', 'Ten handpicked founding ambassadors', 'Free permanent access and early sight of new tools.'],
+          ['PPP Subscription', 'Platinum Property Partners franchise partners', 'The Deals space only.'],
+          ['Team Subscription', 'Every HMO X employee and contractor', 'Full free access, so you see exactly what members see.']
+        ]}, p: [
+          'Price: joining the full Hub is free until 31 December 2027. Some older Hub pages still show the list price of £499 + VAT a year (or £49 + VAT a month). Do not quote a Hub price; say "free to join until the end of 2027".',
+          'When someone joins, the profile asks two questions: the reason they are here, and their goal for the next 12 months. Their answers, and the lens tags they choose, tell us which lens and which next step fits.'
+        ]},
+        { h: 'Recognition, badges and Community Leaders', p: [
+          'Members can recognise one another for our five values (Expert, Approachable, Optimistic, Professional, Community-driven). Recognitions feed the Community Leaders board. A member needs at least 20 points, earned by visiting, working through modules, joining calls, RSVPing and contributing to the Deal Thread, before they can recognise someone else.',
+          'Badges include Getting Started (finishing the welcome checklist), Fundamental Graduate (completing the Our Fundamentals modules), Tier Methodology Certified, Live Regular, Committed (converting a trial into full membership), Verified Buyer and One Year In. Team members carry the HMO X Team Member badge and specialists the Expert Tier Member badge.',
+          'Every week the Newsfeed runs a Community Callout: members post whatever is on their desk, and every question is answered in the comments. Topics that need more go on to the weekly call, with a guest expert where it calls for one.'
+        ]},
+        { h: 'What each of us does in the Hub', table: { head: ['Who', 'Their part'], rows: [
+          ['Richard Nicholls', 'Hosts the weekly call, walks through the week\'s deal releases, writes the Tier Methodology and lens pieces and the Location Intelligence Reports.'],
+          ['Lucy Donovan', 'The Hub community and member onboarding: the onboarding call when someone joins, where a Source-To-Order brief is first captured.'],
+          ['Holly Hunt', 'Marketing, content and the Deal Thread presentation; post-completion mentoring for gifted-year buyers.'],
+          ['Fran Perry', 'Onboarding and the seller relationship.'],
+          ['Georgia Hopewell', 'Auction stock, especially when Tier 4 and Tier 5 rejuvenation comes up.'],
+          ['Kirby Butcher', 'Sales progression; also wrote several of the Hub\'s checklists.'],
+          ['The sales team', 'Live transactions and buyer enquiries from the Deal Thread.'],
+          ['Alice Ibbotson', 'The monthly Compliance Briefing (partner, Property Shield).'],
+          ['Everyone', 'Uses the Hub as a member would, so nothing we tell a client is out of date, and passes back what members are asking for. Some of us also have Host or Moderator rights to manage posts and members.']
+        ]}},
+        { h: 'Rules for the Hub', list: [
+          'The Hub must never undercut a transaction or a paid report. It points to the right HMO X next step; it does not replace it.',
+          'Never post client names, addresses or private figures in a discussion, recording or companion guide. Case studies have the address and parties removed.',
+          'Answer specialist questions with the right specialist, and say "outside HMO X\'s remit" where it is.',
+          'Hub content follows the same voice as everything else: we brief, we do not pitch. Tier terms word for word.',
+          'Nothing goes into the Deal Thread or Deal Vault without Richard\'s OK.'
+        ]}
+      ],
+      confirm: 'The Hub Lite welcome page still quotes £499 + VAT a year or £49 + VAT a month and "ten pieces"; the Hub Lite plan says "eleven-piece". Confirm both pages should now say free until 31 December 2027. Confirm who "Rachel" on the Hub bench is (a Rachel Lewis has Host access). The Self-Operators area (Lettings Process, £499 + VAT licence) and the RRA Course space could not be read through the API; add them if they are still sold.',
+      questions: [
+        { q: 'Where does a Hub member see new HMO X listings before the open market?', o: ['The Deal Thread, 48 hours early', 'Rightmove, the same day', 'Hub Lite Events', 'The Video Library'], a: 0, why: 'Members see every new listing on the Deal Thread 48 hours before the open market.' },
+        { q: 'A Hub Lite member asks how to get the full Hub. What do you tell them?', o: ['Personal Settings, Plans and Access, Change Plan, Hub Subscription: under a minute', 'They must book a strategy call first', 'They have to buy a report first', 'Email Richard for an invitation'], a: 0, why: 'They can upgrade themselves, no call needed. Joining the full Hub is free until the end of 2027.' },
+        { q: 'A buyer completes on an HMO through HMO X Auctions. What happens with the Hub?', o: ['They get a gifted 12-month Hub year from completion day', 'Nothing unless they pay', 'They get Hub Lite only', 'They get one free call'], a: 0, why: 'Every client who completes a purchase or paid service gets twelve months of full Hub membership, automatically.' },
+        { q: 'What is Source-To-Order?', o: ['Members give us a brief and we search the market against it, included in membership', 'A paid sourcing service at 3% of the price', 'A list of auction lots', 'A tenant-finding service'], a: 0, why: 'It is included in Hub membership with no sourcing fee; it suits buyers ready to act.' },
+        { q: 'Which Hub space holds content for an investor buying tired Tier 4 and Tier 5 HMOs to improve them?', o: ['Add Value', 'Developer', 'Exit & Seller', 'Operator'], a: 0, why: 'Add Value is the Rejuvenator lens: spec to the tier it holds, not past it.' },
+        { q: 'When is the weekly Community Call?', o: ['Tuesdays at 7pm', 'Mondays at 9am', 'The first Friday of each month', 'Whenever Richard posts'], a: 0, why: 'Tuesday Live runs every Tuesday at 7pm; one call a month is open to Hub Lite.' },
+        { q: 'A prospect asks what the Hub costs. What do you say?', o: ['It is free to join until the end of 2027', '£499 + VAT a year', '£49 + VAT a month', '£19.99 a month'], a: 0, why: 'Older pages show the list price, but membership is free until 31 December 2027.' },
+        { q: 'A member posts a case study naming the tenant and the street. What should happen?', o: ['Remove the names and address; Hub content never carries them', 'Leave it, members are vetted', 'Pin it as a good example', 'Move it to the Deal Thread'], a: 0, why: 'No client names, addresses or private figures in the Hub.' }
       ]
     },
 
@@ -151,6 +245,7 @@ window.HMOX_COURSE = {
           { name: 'Georgia Hopewell', role: 'Auction Manager', text: 'Runs every auction end to end: appraisals, onboarding, lot preparation, legal packs, bidder support and pre-auction offers. Owns the auction checklist.' },
           { name: 'Kirby Butcher', role: 'Sales Progression', text: 'Takes every sale from agreed to completed, clearing blockers with buyers, solicitors and brokers.' },
           { name: 'Holly Hunt', role: 'Marketing Lead', text: 'Listing marketing, email campaigns, GoHighLevel, brand and tone of voice, Hub visuals.' },
+          { name: 'Lucy Donovan', role: 'Hub community and member onboarding', text: 'Looks after Hub members: the onboarding call when someone joins, the 15-minute call for new Hub Lite registrations, and first capture of Source-To-Order briefs.' },
           { name: 'Ivy and Eric', role: 'Admin support', text: 'Ivy supports Fran with listing preparation and onboarding. Eric supports Georgia with auction enquiries and registrations.' }
         ]},
         { h: 'Who handles what', table: { head: ['Enquiry', 'Goes to'], rows: [
@@ -160,7 +255,8 @@ window.HMOX_COURSE = {
           ['Auction appraisals and the auction cycle', 'Georgia'],
           ['Committed Sale buyers', 'Nikki'],
           ['Sale agreed to completion', 'Kirby'],
-          ['Marketing and campaigns', 'Holly']
+          ['Marketing and campaigns', 'Holly'],
+          ['Hub membership and joining', 'Lucy']
         ]}, p: ['Sellers are passed to the right person within two working days.'] },
         { h: 'Our trusted partners', terms: [
           ['Alice Ibbotson, Property Shield', 'Compliance, licensing and fire risk. A former HMO licensing officer. Writes the monthly Compliance Briefing.'],
@@ -177,7 +273,7 @@ window.HMOX_COURSE = {
           'Our tools read figures only. The valuer has seen the asset, the compliance documents and the client\'s timeframe. The valuer\'s judgement wins, with one sentence explaining why.'
         ]}
       ],
-      confirm: 'Confirm the senior salesperson joining in January, and whether Lucy Donovan (Hub sales) and Hitesh (ads and GHL support) should appear here.',
+      confirm: 'Lucy Donovan added from the Hub (it credits her for the Hub community and member onboarding). Still to confirm: the senior salesperson joining in January; whether Hitesh (ads and GHL support) should appear; and the sales team the Hub names on live transactions (Damon, Eni, Mike D and Asif), who are not on this page yet.',
       questions: [
         { q: 'A landlord rings saying they are thinking of selling. Who is their first call?', o: ['Richard Parsons', 'Kirby Butcher', 'Holly Hunt', 'Eric'], a: 0, why: 'Richard Parsons is the Valuations Coordinator and triages every seller enquiry.' },
         { q: 'Who takes a property from agreed instruction to listing-ready and compliant?', o: ['Fran Perry', 'Georgia Hopewell', 'Nikki Yearsley', 'Richard Parsons'], a: 0, why: 'Fran owns onboarding and the Committed Sale checklist.' },

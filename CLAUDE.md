@@ -9,7 +9,7 @@ Team induction and annual refresher for HMO X. Published (owner: Richard) at htt
 - Staff need Contributor access to save results; managers who sign off need Editor.
 
 ## Sources
-- `research/drive-findings.md` (Drive "Template reports", to 26 Nov 2026) and `research/sessions-findings.md` (other HMO X sessions). Both are cleaned of pay, budgets and discount codes; keep it that way.
+- `research/drive-findings.md` (Drive "Template reports", to 26 Nov 2026), `research/sessions-findings.md` (other HMO X sessions) and `research/hub-findings.md` (the Hub, read through the Mighty GraphQL API, read-only, 26 Nov 2026). All are cleaned of pay, budgets and discount codes; keep it that way.
 - The HMO X report skills (Tier, buyer demand, GDV, buyer brief, structural anchors) hold the methodology wording.
 
 ## House rules for the content
@@ -18,9 +18,9 @@ Team induction and annual refresher for HMO X. Published (owner: Richard) at htt
 - Never name Sprift, never promise an EPC, never call the Tier Test free, no client names or addresses anywhere.
 - Lessons marked with `confirm:` show a manager-only note listing what still needs Richard's input.
 
-## Open items (as of 26 Nov 2026)
-1. Fill in the Hub from the HMO X Hub (Mighty) connector: sections, joining, what each role does there.
-2. Committed Sale minimum: course uses £4,000 (newest files); the Team Analyser wording says £5,000. Confirm with Richard.
-3. Value My HMO price: free in some files, £19.99 in the Tools session. Not stated in the course until confirmed.
-4. Redress scheme, complaints process, service response times: not found anywhere yet.
-5. Day-one practicalities for new starters (logins, hours, buddy) and the January senior salesperson induction.
+## Open items (as of 26 Nov 2026, after the Hub read)
+1. Done: the Hub has its own module (`hub`, the third module) from the Mighty Hub. Left for Richard: the Hub Lite page still quotes £499/£49 and "ten pieces"; who "Rachel" on the Hub bench is; the Self-Operators and RRA course spaces were not readable by the API key.
+2. Committed Sale minimum: course uses £4,000 (newest files); the Team Analyser wording says £5,000. Not in the Hub. Confirm with Richard.
+3. Value My HMO price: free in some files, £19.99 in the Tools session. The Hub gives no price. Not stated in the course until confirmed.
+4. Redress scheme, complaints process, service response times: not in the Hub either.
+5. Day one: the Hub part is now in the intro module. Still needed: hours, other logins, buddy, and the January senior salesperson induction. Also whether Hitesh and the sales team the Hub names (Damon, Eni, Mike D, Asif) belong on the team page.

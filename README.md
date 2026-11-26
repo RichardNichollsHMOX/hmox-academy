@@ -1,6 +1,6 @@
 # HMO X Academy
 
-Team induction and annual training refresher for HMO X: 12 modules, multiple-choice quizzes (80% pass), learner declaration and manager sign-off.
+Team induction and annual training refresher for HMO X: 13 modules, multiple-choice quizzes (80% pass), learner declaration and manager sign-off.
 
 - Published page: https://claude.ai/artifact/6X3kDFQfTQH6K6BLyMX5RS
 - `content.js`: lessons and questions (edit here). Module `id`s must not change once people have taken quizzes.

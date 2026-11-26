@@ -53,7 +53,7 @@ main{padding-block:28px 64px;display:grid;gap:28px}
 /* summary */
 .summary{display:grid;gap:18px}
 .summary h1{font-size:clamp(28px,5vw,40px)}
-.meter{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}
+.meter{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px}
 .meter i{height:10px;border-radius:3px;background:var(--line);display:block}
 .meter i.on{background:var(--teal)}
 .stage{display:grid;gap:10px;background:var(--panel);border-radius:14px;padding:18px}
@@ -251,7 +251,7 @@ function renderHome(){
     ? 'Your training is current until ' + fmtDate(cyc.validUntil) + '. You can revisit any module or retake a quiz to practise.'
     : cyc.passed + ' of ' + M.length + ' modules passed. Read each module, then pass its quiz with ' + pct(C.passMark) + ' or more.';
   const steps = [
-    {t:'Pass all 12 quizzes', d: cyc.passed + ' of ' + M.length, s: cyc.all || cyc.current ? 'done' : 'now'},
+    {t:'Pass all ' + M.length + ' quizzes', d: cyc.passed + ' of ' + M.length, s: cyc.all || cyc.current ? 'done' : 'now'},
     {t:'Sign your declaration', d: cyc.declared || cyc.current ? 'Signed' : 'After the quizzes', s: cyc.declared || cyc.current ? 'done' : cyc.all ? 'now' : ''},
     {t:'Manager sign-off', d: cyc.current ? 'Signed off ' + fmtDate(cyc.last.at) : cyc.ready ? 'Waiting for your manager' : 'Last step', s: cyc.current ? 'done' : cyc.ready ? 'now' : ''}
   ];
