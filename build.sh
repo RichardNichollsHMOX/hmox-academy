@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 mkdir -p dist
 node -e '
 const fs=require("fs");
-const app=fs.readFileSync("app.html","utf8"), content=fs.readFileSync("content.js","utf8")+"\n"+fs.readFileSync("glossary.js","utf8");
+const app=fs.readFileSync("app.html","utf8"), content=fs.readFileSync("content.js","utf8")+"\n"+fs.readFileSync("glossary.js","utf8")+"\n"+fs.readFileSync("images.js","utf8");
 if(!app.includes("/*CONTENT*/")) throw new Error("placeholder missing");
 const safe=content.replace(/<\/script/gi,"<\\/script");
 fs.writeFileSync("dist/hmox-academy.html", app.replace("/*CONTENT*/", ()=>safe));
