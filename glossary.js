@@ -1,0 +1,76 @@
+/*
+ * HMO X Academy plain-English glossary. Based on the HMO X Glossary v1.1 (May 2026), rewritten in
+ * everyday words and brought up to date (26 Nov 2026): one free Hub, 21 HHSRS hazards, the Renters'
+ * Rights Act in force, fire risk assessment rules, no lender figures printed. Shown on the Glossary tab.
+ * Shape: [group, term, plain meaning]
+ */
+window.HMOX_GLOSSARY = [
+  ["The Tier Methodology", "Tier Methodology", "HMO X's way of grading every HMO into one of five tiers, from T1 (the best) to T5 (needs the most work). It looks at the rooms, the location, the tenants and how well the house is run. Every HMO X report and valuation uses it."],
+  ["The Tier Methodology", "T1 · Premium", "The top end: big rooms (15 sqm or more), hotel-style finish, a prime city-centre or hospital location, usually 8 to 12+ rooms run as a branded co-living scheme. Most ordinary houses can never become T1, however much is spent."],
+  ["The Tier Methodology", "T2 · New quality", "Recently done up, every room with its own bathroom (around 10 sqm a room), modern and professionally managed, typically 6 to 8 rooms. The solid middle of the market that lenders and buyers like most."],
+  ["The Tier Methodology", "T3 · Standard", "A T2 house a few years on and starting to look its age, or a roomy house without en-suites. In good order and earning steadily."],
+  ["The Tier Methodology", "T4 · Basic", "An older house with shared bathrooms in a less sought-after area, dated but legal and earning. Often run by a hands-on private landlord."],
+  ["The Tier Methodology", "T5 · Needs work", "Run down, often part empty, sometimes only just compliant, but worth something because it already has HMO rights that are hard to get today. A project for someone adding value."],
+  ["The Tier Methodology", "Home tier", "The tier a house can realistically hold for the long term, given its size, location and facilities. It is the yardstick for its rent and value."],
+  ["The Tier Methodology", "Home tier %", "The rent a house earns compared with what its home tier should earn in that town. 100% means it earns exactly what it should; 115% or more is a launch premium that will fade; 85% to 95% is drifting; under 85% means it is earning a tier or more below where it should."],
+  ["The Tier Methodology", "Launch premium", "The extra rent a freshly finished HMO earns in its first months because everything is new. It fades over the first year or two, so never borrow against it."],
+  ["The Tier Methodology", "Tier slippage", "HMOs naturally slide down the tiers as they age if nobody reinvests: roughly one tier every two to three years when left alone."],
+  ["The Tier Methodology", "Tier defence", "The spending and management that stop slippage: setting aside about £500 to £1,000 a room each year, plus a proper refit every 5 to 7 years."],
+  ["The Tier Methodology", "Leverage trap", "Borrowing as much as possible against the high rent a new HMO earns at launch, then struggling when the rent settles lower. The rule: borrow against the rent the house will hold, not the rent it earns in year one."],
+
+  ["Planning and use class", "Use class C3", "A normal family home, or a house let to one household. Where most HMO conversions start."],
+  ["Planning and use class", "Use class C4", "A small HMO: 3 to 6 people from more than one household sharing."],
+  ["Planning and use class", "Sui generis HMO", "A large HMO with 7 or more people. It always needs full planning permission. The seventh person is where the rules change."],
+  ["Planning and use class", "Permitted development", "Building work or a change of use you can do without a planning application. Turning a family home (C3) into a small HMO (C4) is normally permitted development."],
+  ["Planning and use class", "Article 4 direction", "A council order that takes away that automatic right in a set area, so every new small HMO there needs planning permission. HMOs already lawfully running keep their rights."],
+  ["Planning and use class", "Grandfather rights", "The right of an HMO that was lawfully running before the rules changed to carry on. The right passes to each new owner, which makes these houses valuable in Article 4 areas."],
+  ["Planning and use class", "LDC (Lawful Development Certificate)", "A certificate from the council confirming an HMO's use is legal, either because it started before an Article 4 direction or because it has run for 10 years without enforcement. Buyers, solicitors and lenders increasingly ask for one. It usually takes 8 to 12 weeks."],
+  ["Planning and use class", "HMO concentration cap", "A council rule limiting how many HMOs can be in one area (often 10% to 20% of homes nearby). Once a street hits the cap, new HMOs are refused."],
+  ["Planning and use class", "Planning pack", "The bundle of planning evidence a buyer's solicitor, lender and council all want to see: use class, planning history, Article 4 status and the LDC if there is one."],
+
+  ["Licensing and safety", "Housing Act 2004", "The main law behind HMO licensing, management rules and the housing health and safety checks councils carry out."],
+  ["Licensing and safety", "Mandatory licence", "A licence every HMO needs, anywhere in England, once it has 5 or more people from 2 or more households. Usually lasts 5 years and typically costs £600 to £1,500 or more. It does not transfer to a buyer."],
+  ["Licensing and safety", "Additional licensing", "A local council scheme that also requires smaller HMOs (often 3 or 4 people) to be licensed in a chosen area."],
+  ["Licensing and safety", "Selective licensing", "A local council scheme requiring every privately rented home in an area to be licensed, not just HMOs."],
+  ["Licensing and safety", "HHSRS", "The Housing Health and Safety Rating System: how councils judge hazards in a rented home, such as damp, cold, fire or falls. Since 23 June 2026 it has 21 hazard types (it used to be 29). Category 1 hazards mean the council must act; Category 2 means it may."],
+  ["Licensing and safety", "Gas safety record (CP12)", "The yearly gas safety check by a Gas Safe engineer. Tenants must get a copy within 28 days."],
+  ["Licensing and safety", "EICR", "The electrical safety report, needed every 5 years. Serious faults (C1, C2 and FI) must be put right within 28 days."],
+  ["Licensing and safety", "Fire risk assessment (FRA)", "The written check of fire risks and precautions in the house. A full assessment by a competent assessor roughly every 4 years, with a written review every year and after any change or incident."],
+  ["Licensing and safety", "EPC", "The Energy Performance Certificate, rating the home from A to G. A rented home needs at least an E today; a C is proposed for new tenancies from 2028 and all tenancies from 2030. We never promise a client an EPC rating."],
+  ["Licensing and safety", "Deposit protection", "Tenants' deposits must go into a government-approved scheme (DPS, TDS or MyDeposits) within 30 days, with the required paperwork. Deposits are capped at five weeks' rent. Getting it wrong now stops a landlord getting possession."],
+  ["Licensing and safety", "Right to Rent", "The legal check that every adult tenant can live in the UK, done before the tenancy starts."],
+
+  ["Renting under the Renters' Rights Act", "Renters' Rights Act (RRA)", "The law that changed renting in England on 1 May 2026. It ended no-fault evictions, made every tenancy rolling with no fixed end date, and brought in tougher penalties."],
+  ["Renting under the Renters' Rights Act", "Assured periodic tenancy (APT)", "The only kind of private tenancy now: it rolls on month to month with no fixed term. Old fixed-term tenancies (ASTs) became APTs on 1 May 2026."],
+  ["Renting under the Renters' Rights Act", "Section 21", "The old “no-fault” eviction notice. Abolished on 1 May 2026."],
+  ["Renting under the Renters' Rights Act", "Section 8", "The way a landlord now gets a property back, using set reasons such as rent arrears, anti-social behaviour or selling, with evidence and the right notice period."],
+  ["Renting under the Renters' Rights Act", "Section 13 rent increase", "The formal way to raise rent: at least two months' notice, no more than once a year. Tenants can challenge an above-market rent at tribunal, so keep evidence of local rents."],
+  ["Renting under the Renters' Rights Act", "Rent repayment order", "A tribunal order making a landlord pay back rent, for example for running an unlicensed HMO. It can now be up to two years' rent."],
+  ["Renting under the Renters' Rights Act", "Awaab's Law", "Rules setting deadlines for landlords to investigate and fix damp, mould and other serious hazards."],
+  ["Renting under the Renters' Rights Act", "Decent Homes Standard", "A minimum condition standard, now being extended to private rented homes."],
+  ["Renting under the Renters' Rights Act", "Landlord database and ombudsman", "A national register of landlords and a free complaints service for tenants, both being set up under the Act."],
+
+  ["Money and finance", "Gross yield", "The rent a year when every room is let, as a percentage of the price. £39,000 rent on a £300,000 house is 13%."],
+  ["Money and finance", "Net yield", "The same sum after running costs and empty rooms are taken off the rent. The figure that really matters."],
+  ["Money and finance", "Applied yield", "The yield a valuer uses to turn an HMO's rent into a value. The lower the yield, the higher the value."],
+  ["Money and finance", "LTV (loan to value)", "How much a lender will lend as a percentage of its own valuation, not the price paid. Lenders set their own limits: always confirm live with a broker."],
+  ["Money and finance", "ICR (interest cover ratio)", "How far the rent must exceed the mortgage interest, tested at a higher “stress” rate than the real one. Lenders set their own: always confirm live with a broker."],
+  ["Money and finance", "Bricks-and-mortar valuation", "Valuing the HMO as a house, by comparing it with similar homes sold nearby. The usual basis for smaller HMOs."],
+  ["Money and finance", "Investment valuation", "Valuing the HMO as a business, based on the income it earns. The usual basis for larger HMOs; possible for a well-run small one."],
+  ["Money and finance", "GDV", "Gross development value: what a project will be worth once it is finished."],
+  ["Money and finance", "ROCE", "Return on capital employed: the yearly profit as a percentage of the cash the investor actually put in."],
+  ["Money and finance", "SPV", "A limited company set up just to own property. Many higher-rate taxpayers use one because of Section 24. Structure is a question for a specialist accountant."],
+  ["Money and finance", "Section 24", "The tax rule that stopped landlords who own property personally from deducting all their mortgage interest. Companies can still deduct it."],
+  ["Money and finance", "Bridging and refurbishment loans", "Short-term loans to buy a property a normal mortgage will not cover yet (empty, run down or being converted), repaid by a mortgage once the work is done."],
+
+  ["Selling and HMO X services", "Asking, clearing and sold prices", "Three different things: the asking price is what a seller puts it on the market at; the clearing price is what it actually sells for on the day; sold prices are what similar HMOs have achieved over the past one to three years. Never average them together."],
+  ["Selling and HMO X services", "Off-market sale", "A sale agreed with a buyer from our own database before the property is advertised publicly."],
+  ["Selling and HMO X services", "Sales Appraisal", "Our free valuation for an owner thinking of selling: what the HMO is worth, how to price it and which way of selling suits it."],
+  ["Selling and HMO X services", "Committed Sale", "Our private sale route: a fully prepared pack at launch, vetted buyers, a £3,500 buyer reservation deposit and 56 days to exchange. Fees: £400 + VAT onboarding plus 2% + VAT, minimum £4,000 + VAT."],
+  ["Selling and HMO X services", "HMO X Auctions", "The UK's first auction house just for HMOs, launched June 2025. Exchange happens when the hammer falls, with completion in 6 to 8 weeks. Fees: £400 + VAT onboarding plus 2.5% + VAT, minimum £5,000 + VAT."],
+  ["Selling and HMO X services", "Exit Planning", "A plan for owners selling in 12 to 36 months: how to lift the value first and when to launch. £995 + VAT for the first HMO."],
+  ["Selling and HMO X services", "HMO Health Check", "A review of an HMO the owner is keeping: where its rent sits against its tier, its compliance and what to spend to get it back to full potential. £995 + VAT per HMO, including a visit from Richard."],
+  ["Selling and HMO X services", "Hold and review", "Our advice when selling now is not right: keep the HMO and agree a date to look again."],
+  ["Selling and HMO X services", "HMO X tools", "Our online tools on tools.hmox.co.uk: Value My HMO, the Tier Test, the GDV Appraisal, Find My Next HMO (free) and the Location Intelligence Report."],
+  ["Selling and HMO X services", "The HMO X Hub", "Our online community for HMO investors at mighty.hmox.co.uk, free to join until 31 December 2027. Every guide in it links to the HMO X tool that fits."]
+];

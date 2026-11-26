@@ -3,7 +3,7 @@
 A general introduction to HMO X and to HMOs, for anyone joining the business whatever their role (Richard, 26 Nov 2026: not specific to a person or role), used as the induction and annual refresher. Published (owner: Richard) at https://claude.ai/artifact/6X3kDFQfTQH6K6BLyMX5RS. Always republish to that same URL (pass it as `url`; read it first), never create a new artifact.
 
 ## How it is built
-- `content.js` holds every lesson and question. Module `id`s are keys for people's saved results: never rename or remove one.
+- `content.js` holds every lesson and question; `glossary.js` holds the plain-English Glossary tab (rewritten from the HMO X Glossary v1.1, May 2026, and brought up to date). Module `id`s are keys for people's saved results: never rename or remove one.
 - `app.html` is the page. `bash build.sh` inlines the content into `dist/hmox-academy.html`, which is the file published.
 - Results live in the artifact's database: `progress/<person>` (only that person writes; Editors read all) and `signoffs/<person>` (Editors write). Keep the same `capabilities` on republish (omit the field to keep them).
 - Staff need Contributor access to save results; managers who sign off need Editor.

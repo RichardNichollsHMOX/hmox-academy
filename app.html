@@ -143,6 +143,17 @@ input[type=text],textarea{font:inherit;padding:10px 12px;border-radius:10px;bord
 .cert p{color:var(--teal-ink)}
 .cert b{color:var(--ink)}
 
+/* glossary */
+#glist{display:grid;gap:16px}
+.gsec{border-radius:24px;padding:20px 22px;display:grid;gap:10px;background:var(--mint)}
+.gsec.g1{background:var(--sky)}
+.gsec.g2{background:var(--butter)}
+.gsec h2{font-size:20px}
+.gsec dl.terms{border-top-color:rgba(40,40,41,.12)}
+.gsec dl.terms div{border-bottom-color:rgba(40,40,41,.12)}
+.gsec dd{color:var(--ink)!important}
+.gsearch{display:grid;gap:6px;max-width:460px}
+
 /* team */
 .team{display:grid;gap:14px}
 .person{border:1px solid var(--line);background:#ffffff;border-radius:18px;padding:14px;display:grid;gap:12px}
@@ -164,6 +175,7 @@ input[type=text],textarea{font:inherit;padding:10px 12px;border-radius:10px;bord
   <a class="brand" href="#"><b>HMO <span class="x">X</span> <span class="acad">Academy</span></b></a>
   <nav class="tabs" aria-label="Sections">
     <a href="#" id="tabMine">My training</a>
+    <a href="#glossary" id="tabGloss">Glossary</a>
     <a href="#team" id="tabTeam" hidden>Team sign-off</a>
   </nav>
 </div></div>
@@ -237,14 +249,35 @@ function toast(msg, bad){
 function route(){
   const h = location.hash.replace('#','');
   document.getElementById('tabTeam').hidden = !S.canEdit;
-  const onTeam = h === 'team' && S.canEdit;
-  document.getElementById('tabMine').toggleAttribute('aria-current', !onTeam); if(!onTeam) document.getElementById('tabMine').setAttribute('aria-current','page');
+  const onTeam = h === 'team' && S.canEdit, onGloss = h === 'glossary';
+  document.getElementById('tabMine').toggleAttribute('aria-current', !onTeam && !onGloss); if(!onTeam && !onGloss) document.getElementById('tabMine').setAttribute('aria-current','page');
+  document.getElementById('tabGloss').toggleAttribute('aria-current', onGloss); if(onGloss) document.getElementById('tabGloss').setAttribute('aria-current','page');
   document.getElementById('tabTeam').toggleAttribute('aria-current', onTeam); if(onTeam) document.getElementById('tabTeam').setAttribute('aria-current','page');
   if (h.startsWith('m-')) { const mod = M.find(m => 'm-' + m.id === h); if (mod) return renderModule(mod); }
   if (onTeam) return renderTeam();
+  if (onGloss) return renderGlossary();
   renderHome();
 }
 window.addEventListener('hashchange', () => { S.quiz = null; route(); window.scrollTo(0,0); });
+
+/* ---------- glossary ---------- */
+function renderGlossary(){
+  const G = window.HMOX_GLOSSARY || [], groups = [...new Set(G.map(g => g[0]))];
+  app.innerHTML = '<section class="summary"><div class="eyebrow">Reference</div><h1>Glossary</h1><p class="muted">The words you will hear every day at HMO X, in plain English.</p>'
+    + '<label class="gsearch" for="gq"><span class="small"><b>Search the glossary</b></span><input type="text" id="gq" placeholder="For example: LDC, yield, Section 8" autocomplete="off"></label></section><div id="glist"></div>';
+  const list = document.getElementById('glist'), q = document.getElementById('gq');
+  const draw = () => {
+    const t = q.value.trim().toLowerCase();
+    let h = '', n = 0;
+    groups.forEach((g, gi) => {
+      const rows = G.filter(x => x[0] === g && (!t || (x[1] + ' ' + x[2]).toLowerCase().includes(t)));
+      if (!rows.length) return; n += rows.length;
+      h += '<section class="gsec g' + (gi % 3) + '"><h2>' + esc(g) + '</h2><dl class="terms">' + rows.map(x => '<div><dt>' + esc(x[1]) + '</dt><dd>' + esc(x[2]) + '</dd></div>').join('') + '</dl></section>';
+    });
+    list.innerHTML = h || '<p class="muted">Nothing matches “' + esc(q.value) + '”. Try a shorter word.</p>';
+  };
+  q.oninput = draw; draw();
+}
 
 /* ---------- home ---------- */
 function renderHome(){
