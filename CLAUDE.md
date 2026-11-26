@@ -19,8 +19,8 @@ Team induction and annual refresher for HMO X. Published (owner: Richard) at htt
 - Lessons marked with `confirm:` show a manager-only note listing what still needs Richard's input.
 
 ## Open items (as of 26 Nov 2026, after the Hub read)
-1. Done: the Hub has its own module (`hub`, the third module) from the Mighty Hub. Left for Richard: the Hub Lite page still quotes £499/£49 and "ten pieces"; who "Rachel" on the Hub bench is; the Self-Operators and RRA course spaces were not readable by the API key.
+1. Done: the Hub has its own module (`hub`, the third module) from the Mighty Hub. Hub pages that are out of date (Hub Lite pricing, unnamed bench entries, the Self-Operators and RRA course spaces) are being changed or removed by Holly: leave them out of the course.
 2. Committed Sale minimum: course uses £4,000 (newest files); the Team Analyser wording says £5,000. Not in the Hub. Confirm with Richard.
 3. Value My HMO price: free in some files, £19.99 in the Tools session. The Hub gives no price. Not stated in the course until confirmed.
 4. Redress scheme, complaints process, service response times: not in the Hub either.
-5. Day one: the Hub part is now in the intro module. Still needed: hours, other logins, buddy, and the January senior salesperson induction. Also whether Hitesh and the sales team the Hub names (Damon, Eni, Mike D, Asif) belong on the team page.
+5. Day one: the Hub part is now in the intro module. Still needed: hours, other logins, buddy, and the January senior salesperson induction. Also whether Hitesh belongs on the team page.

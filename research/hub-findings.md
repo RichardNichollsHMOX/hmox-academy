@@ -71,5 +71,5 @@ Upgrade path given to members: Personal Settings > Plans and Access > Change Pla
 ## Not found in the Hub
 - Committed Sale minimum, Value My HMO price, redress scheme, complaints process, response times, hours/logins/buddy, the January senior salesperson induction.
 
-## Inconsistencies to raise
-- Welcome to Hub Lite page still says £499 + VAT a year or £49 + VAT a month to upgrade, and "ten pieces"; Hub Lite plan says "eleven-piece"; the live Hub plan is free.
+## Out of scope
+- Out-of-date Hub pages (Hub Lite upgrade pricing, unnamed bench entries, the Self-Operators and RRA course spaces) are being changed or removed by Holly. Not used in the course.

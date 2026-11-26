@@ -191,7 +191,7 @@ window.HMOX_COURSE = {
           ['PPP Subscription', 'Platinum Property Partners franchise partners', 'The Deals space only.'],
           ['Team Subscription', 'Every HMO X employee and contractor', 'Full free access, so you see exactly what members see.']
         ]}, p: [
-          'Price: joining the full Hub is free until 31 December 2027. Some older Hub pages still show the list price of £499 + VAT a year (or £49 + VAT a month). Do not quote a Hub price; say "free to join until the end of 2027".',
+          'Price: joining the full Hub is free until 31 December 2027. Say "free to join until the end of 2027".',
           'When someone joins, the profile asks two questions: the reason they are here, and their goal for the next 12 months. Their answers, and the lens tags they choose, tell us which lens and which next step fits.'
         ]},
         { h: 'Recognition, badges and Community Leaders', p: [
@@ -218,7 +218,6 @@ window.HMOX_COURSE = {
           'Nothing goes into the Deal Thread or Deal Vault without Richard\'s OK.'
         ]}
       ],
-      confirm: 'The Hub Lite welcome page still quotes £499 + VAT a year or £49 + VAT a month and "ten pieces"; the Hub Lite plan says "eleven-piece". Confirm both pages should now say free until 31 December 2027. Confirm who "Rachel" on the Hub bench is (a Rachel Lewis has Host access). The Self-Operators area (Lettings Process, £499 + VAT licence) and the RRA Course space could not be read through the API; add them if they are still sold.',
       questions: [
         { q: 'Where does a Hub member see new HMO X listings before the open market?', o: ['The Deal Thread, 48 hours early', 'Rightmove, the same day', 'Hub Lite Events', 'The Video Library'], a: 0, why: 'Members see every new listing on the Deal Thread 48 hours before the open market.' },
         { q: 'A Hub Lite member asks how to get the full Hub. What do you tell them?', o: ['Personal Settings, Plans and Access, Change Plan, Hub Subscription: under a minute', 'They must book a strategy call first', 'They have to buy a report first', 'Email Richard for an invitation'], a: 0, why: 'They can upgrade themselves, no call needed. Joining the full Hub is free until the end of 2027.' },
@@ -226,7 +225,7 @@ window.HMOX_COURSE = {
         { q: 'What is Source-To-Order?', o: ['Members give us a brief and we search the market against it, included in membership', 'A paid sourcing service at 3% of the price', 'A list of auction lots', 'A tenant-finding service'], a: 0, why: 'It is included in Hub membership with no sourcing fee; it suits buyers ready to act.' },
         { q: 'Which Hub space holds content for an investor buying tired Tier 4 and Tier 5 HMOs to improve them?', o: ['Add Value', 'Developer', 'Exit & Seller', 'Operator'], a: 0, why: 'Add Value is the Rejuvenator lens: spec to the tier it holds, not past it.' },
         { q: 'When is the weekly Community Call?', o: ['Tuesdays at 7pm', 'Mondays at 9am', 'The first Friday of each month', 'Whenever Richard posts'], a: 0, why: 'Tuesday Live runs every Tuesday at 7pm; one call a month is open to Hub Lite.' },
-        { q: 'A prospect asks what the Hub costs. What do you say?', o: ['It is free to join until the end of 2027', '£499 + VAT a year', '£49 + VAT a month', '£19.99 a month'], a: 0, why: 'Older pages show the list price, but membership is free until 31 December 2027.' },
+        { q: 'A prospect asks what the Hub costs. What do you say?', o: ['It is free to join until the end of 2027', '£499 + VAT a year', '£49 + VAT a month', '£19.99 a month'], a: 0, why: 'Membership is free until 31 December 2027.' },
         { q: 'A member posts a case study naming the tenant and the street. What should happen?', o: ['Remove the names and address; Hub content never carries them', 'Leave it, members are vetted', 'Pin it as a good example', 'Move it to the Deal Thread'], a: 0, why: 'No client names, addresses or private figures in the Hub.' }
       ]
     },
@@ -273,7 +272,7 @@ window.HMOX_COURSE = {
           'Our tools read figures only. The valuer has seen the asset, the compliance documents and the client\'s timeframe. The valuer\'s judgement wins, with one sentence explaining why.'
         ]}
       ],
-      confirm: 'Lucy Donovan added from the Hub (it credits her for the Hub community and member onboarding). Still to confirm: the senior salesperson joining in January; whether Hitesh (ads and GHL support) should appear; and the sales team the Hub names on live transactions (Damon, Eni, Mike D and Asif), who are not on this page yet.',
+      confirm: 'Lucy Donovan added from the Hub (it credits her for the Hub community and member onboarding). Still to confirm: the senior salesperson joining in January, and whether Hitesh (ads and GHL support) should appear.',
       questions: [
         { q: 'A landlord rings saying they are thinking of selling. Who is their first call?', o: ['Richard Parsons', 'Kirby Butcher', 'Holly Hunt', 'Eric'], a: 0, why: 'Richard Parsons is the Valuations Coordinator and triages every seller enquiry.' },
         { q: 'Who takes a property from agreed instruction to listing-ready and compliant?', o: ['Fran Perry', 'Georgia Hopewell', 'Nikki Yearsley', 'Richard Parsons'], a: 0, why: 'Fran owns onboarding and the Committed Sale checklist.' },
