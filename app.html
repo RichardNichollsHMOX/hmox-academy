@@ -1,17 +1,18 @@
 <title>HMO X Academy</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
 <style>
-/* Layout: one reading column; home = progress + module ladder, module = lesson then quiz, team = sign-off register. */
+/* HMO X brand: teal #4DE3BD, off-black #282829, accent green #0C886B, white; pastels for backgrounds only.
+   Layout: one reading column; home = progress + module ladder, module = lesson then quiz, team = sign-off register. */
 :root{
   --ink:#282829; --ink-2:#55575b; --ink-3:#85878c;
-  --bg:#ffffff; --panel:#f3f6f5; --line:#e1e7e5;
-  --teal:#4DE3BD; --teal-ink:#0b2a22; --teal-deep:#0f8f72;
+  --bg:#ffffff; --panel:#e4f8f1; --line:#e6e6ea;
+  --teal:#4DE3BD; --teal-ink:#0b2a22; --teal-deep:#0C886B;
   --good:#127a4f; --good-bg:#e3f5ec; --warn:#8a5a00; --warn-bg:#fdf1d8; --bad:#b3261e; --bad-bg:#fbe6e4;
   --hero:#282829; --hero-fg:#ffffff; --hero-dim:#b9bcbf;
-  --display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
-  --body:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
+  --body:"Open Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --ink:#eef0ef; --ink-2:#b8bdbb; --ink-3:#8b918f; --bg:#151817; --panel:#1e2322; --line:#2d3432;
@@ -23,7 +24,7 @@
   --hero:#0c0e0d; --hero-fg:#ffffff; --hero-dim:#9ea3a1; color-scheme:dark}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
 *{box-sizing:border-box}
-h1,h2,h3{font-family:var(--display);letter-spacing:-.02em;text-wrap:balance;margin:0;line-height:1.15}
+h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-.02em;text-wrap:balance;margin:0;line-height:1.15}
 p{margin:0}
 a{color:var(--teal-deep)}
 button{font:inherit;cursor:pointer}
@@ -37,7 +38,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .mark{width:30px;height:30px;border-radius:8px;background:var(--hero-fg);display:grid;place-items:center;flex:none}
 .mark i{width:12px;height:12px;border-radius:3px;background:var(--teal);display:block}
 .brand b{font-family:var(--display);font-size:19px;letter-spacing:-.01em}
-.brand span{color:var(--teal);font-weight:500}
+.brand .x{color:var(--teal)}
+.brand .acad{color:var(--hero-dim);font-weight:600}
 .tabs{display:flex;gap:4px}
 .tabs a{color:var(--hero-dim);text-decoration:none;font-weight:600;font-size:14px;padding:7px 12px;border-radius:999px}
 .tabs a[aria-current="page"]{background:color-mix(in srgb,var(--hero-fg) 14%,transparent);color:var(--hero-fg)}
@@ -97,14 +99,14 @@ th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);verti
 th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 td{font-variant-numeric:tabular-nums}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
-.card{background:var(--panel);border-radius:12px;padding:14px;display:grid;gap:4px;align-content:start}
+.card{background:var(--panel);border-radius:16px;padding:14px;display:grid;gap:4px;align-content:start}
 .card b{font-family:var(--display);font-size:18px}
 .card .role{font-size:13px;font-weight:600;color:var(--teal-deep)}
 .confirm{border:1.5px dashed var(--warn);background:var(--warn-bg);color:var(--ink);border-radius:12px;padding:12px 14px;font-size:14px;max-width:68ch}
 .confirm b{color:var(--warn)}
 
 .cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:700;background:var(--ink);color:var(--bg)}
+.btn{border:0;border-radius:999px;padding:11px 18px;font-weight:700;background:var(--ink);color:var(--bg)}
 .btn.teal{background:var(--teal);color:var(--teal-ink)}
 .btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
 .btn[disabled]{opacity:.45;cursor:not-allowed}
@@ -155,7 +157,7 @@ input[type=text],textarea{font:inherit;padding:10px 12px;border-radius:10px;bord
 </style>
 
 <div class="band"><div class="wrap">
-  <a class="brand" href="#"><span class="mark"><i></i></span><b>HMO X <span>Academy</span></b></a>
+  <a class="brand" href="#"><b>HMO <span class="x">X</span> <span class="acad">Academy</span></b></a>
   <nav class="tabs" aria-label="Sections">
     <a href="#" id="tabMine">My training</a>
     <a href="#team" id="tabTeam" hidden>Team sign-off</a>
